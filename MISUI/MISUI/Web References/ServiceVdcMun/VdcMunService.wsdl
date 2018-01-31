@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="InsertVdcMun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:VdcMun" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VdcMun">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="District" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VdcMunNameEng" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VdcMunNameNep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VdcMunType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VdcMunCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VdcMunId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEnable" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLocked" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertVdcMunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertVdcMunResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVdcMunById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVdcMunByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteVdcMunByIdResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchVdcMunByDistrict">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uBo" type="tns:Users" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Users">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameEng" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameNep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Office" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Role" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Organizarion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnableDisable" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="District" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLocked" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchVdcMunByDistrictResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchVdcMunByDistrictResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMunVdcDetailsById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMunVdcDetailsByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchMunVdcDetailsByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVdcMunById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:VdcMun" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVdcMunByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateVdcMunByIdResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchAllVdcMun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchAllVdcMunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchAllVdcMunResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="populateVdcMun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="disId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="populateVdcMunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="populateVdcMunResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LockVdcMun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vdcMunId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LockVdcMunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LockVdcMunResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockVdcMun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vdcMunId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockVdcMunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UnlockVdcMunResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertVdcMunSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertVdcMun" />
+  </wsdl:message>
+  <wsdl:message name="InsertVdcMunSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertVdcMunResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertVdcMunAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVdcMunByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteVdcMunById" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVdcMunByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteVdcMunByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVdcMunByIdAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="SearchVdcMunByDistrictSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchVdcMunByDistrict" />
+  </wsdl:message>
+  <wsdl:message name="SearchVdcMunByDistrictSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchVdcMunByDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchVdcMunByDistrictAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="FetchMunVdcDetailsByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchMunVdcDetailsById" />
+  </wsdl:message>
+  <wsdl:message name="FetchMunVdcDetailsByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchMunVdcDetailsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchMunVdcDetailsByIdAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVdcMunByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVdcMunById" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVdcMunByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVdcMunByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVdcMunByIdAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="FetchAllVdcMunSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchAllVdcMun" />
+  </wsdl:message>
+  <wsdl:message name="FetchAllVdcMunSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchAllVdcMunResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchAllVdcMunAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="populateVdcMunSoapIn">
+    <wsdl:part name="parameters" element="tns:populateVdcMun" />
+  </wsdl:message>
+  <wsdl:message name="populateVdcMunSoapOut">
+    <wsdl:part name="parameters" element="tns:populateVdcMunResponse" />
+  </wsdl:message>
+  <wsdl:message name="populateVdcMunAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="LockVdcMunSoapIn">
+    <wsdl:part name="parameters" element="tns:LockVdcMun" />
+  </wsdl:message>
+  <wsdl:message name="LockVdcMunSoapOut">
+    <wsdl:part name="parameters" element="tns:LockVdcMunResponse" />
+  </wsdl:message>
+  <wsdl:message name="LockVdcMunAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="UnlockVdcMunSoapIn">
+    <wsdl:part name="parameters" element="tns:UnlockVdcMun" />
+  </wsdl:message>
+  <wsdl:message name="UnlockVdcMunSoapOut">
+    <wsdl:part name="parameters" element="tns:UnlockVdcMunResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnlockVdcMunAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:portType name="VdcMunServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertVdcMun">
+      <wsdl:input message="tns:InsertVdcMunSoapIn" />
+      <wsdl:output message="tns:InsertVdcMunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVdcMunById">
+      <wsdl:input message="tns:DeleteVdcMunByIdSoapIn" />
+      <wsdl:output message="tns:DeleteVdcMunByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchVdcMunByDistrict">
+      <wsdl:input message="tns:SearchVdcMunByDistrictSoapIn" />
+      <wsdl:output message="tns:SearchVdcMunByDistrictSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMunVdcDetailsById">
+      <wsdl:input message="tns:FetchMunVdcDetailsByIdSoapIn" />
+      <wsdl:output message="tns:FetchMunVdcDetailsByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVdcMunById">
+      <wsdl:input message="tns:UpdateVdcMunByIdSoapIn" />
+      <wsdl:output message="tns:UpdateVdcMunByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllVdcMun">
+      <wsdl:input message="tns:FetchAllVdcMunSoapIn" />
+      <wsdl:output message="tns:FetchAllVdcMunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="populateVdcMun">
+      <wsdl:input message="tns:populateVdcMunSoapIn" />
+      <wsdl:output message="tns:populateVdcMunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LockVdcMun">
+      <wsdl:input message="tns:LockVdcMunSoapIn" />
+      <wsdl:output message="tns:LockVdcMunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockVdcMun">
+      <wsdl:input message="tns:UnlockVdcMunSoapIn" />
+      <wsdl:output message="tns:UnlockVdcMunSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VdcMunServiceSoap" type="tns:VdcMunServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:HelloWorldAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertVdcMun">
+      <soap:operation soapAction="http://tempuri.org/InsertVdcMun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVdcMunById">
+      <soap:operation soapAction="http://tempuri.org/DeleteVdcMunById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteVdcMunByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchVdcMunByDistrict">
+      <soap:operation soapAction="http://tempuri.org/SearchVdcMunByDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchVdcMunByDistrictAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMunVdcDetailsById">
+      <soap:operation soapAction="http://tempuri.org/FetchMunVdcDetailsById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FetchMunVdcDetailsByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVdcMunById">
+      <soap:operation soapAction="http://tempuri.org/UpdateVdcMunById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateVdcMunByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllVdcMun">
+      <soap:operation soapAction="http://tempuri.org/FetchAllVdcMun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FetchAllVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateVdcMun">
+      <soap:operation soapAction="http://tempuri.org/populateVdcMun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:populateVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockVdcMun">
+      <soap:operation soapAction="http://tempuri.org/LockVdcMun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:LockVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockVdcMun">
+      <soap:operation soapAction="http://tempuri.org/UnlockVdcMun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UnlockVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VdcMunServiceSoap12" type="tns:VdcMunServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:HelloWorldAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertVdcMun">
+      <soap12:operation soapAction="http://tempuri.org/InsertVdcMun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVdcMunById">
+      <soap12:operation soapAction="http://tempuri.org/DeleteVdcMunById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteVdcMunByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchVdcMunByDistrict">
+      <soap12:operation soapAction="http://tempuri.org/SearchVdcMunByDistrict" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchVdcMunByDistrictAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMunVdcDetailsById">
+      <soap12:operation soapAction="http://tempuri.org/FetchMunVdcDetailsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FetchMunVdcDetailsByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVdcMunById">
+      <soap12:operation soapAction="http://tempuri.org/UpdateVdcMunById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateVdcMunByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllVdcMun">
+      <soap12:operation soapAction="http://tempuri.org/FetchAllVdcMun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FetchAllVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateVdcMun">
+      <soap12:operation soapAction="http://tempuri.org/populateVdcMun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:populateVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockVdcMun">
+      <soap12:operation soapAction="http://tempuri.org/LockVdcMun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LockVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockVdcMun">
+      <soap12:operation soapAction="http://tempuri.org/UnlockVdcMun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UnlockVdcMunAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VdcMunService">
+    <wsdl:port name="VdcMunServiceSoap" binding="tns:VdcMunServiceSoap">
+      <soap:address location="http://localhost:7404/VdcMunService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VdcMunServiceSoap12" binding="tns:VdcMunServiceSoap12">
+      <soap12:address location="http://localhost:7404/VdcMunService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

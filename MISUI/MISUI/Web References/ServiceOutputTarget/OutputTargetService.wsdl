@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SelectTarget">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputTarget">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityOutputId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityOutputEngName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityOutputNepName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityOutputCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityOutputTypeId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ToipYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubSectorId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEnable" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLocked" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lang" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TargetId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="TargetFirstYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TargetSecondYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TargetThirdYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityOutputMapId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SectorId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="OverallTarget" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BaseYearTarget" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FrameworkId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PtargetId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PustyayiyekoShrot" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponsibleOfficeId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinistryId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentOutputId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectTargetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectTargetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="PopulateAllTargets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllTargetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateAllTargetsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectTargets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectTargetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateProjectTargetsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateTargetById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateTargetByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateTargetByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTarget">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTargetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddTargetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProjectOutputTarget">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProjectOutputTargetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddProjectOutputTargetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFramework">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectFrameworkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectFrameworkResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectOutputResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectOutputResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="populateOutputType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="populateOutputTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="populateOutputTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllOutputs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllOutputsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateAllOutputsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateOutputById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateOutputByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateOutputByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOutputResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOutputResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="populateSubSector">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="populateSubSectorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="populateSubSectorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSectorsToFilter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSectorsToFilterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateSectorsToFilterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSubSectorsToFilter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSubSectorsToFilterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateSubSectorsToFilterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllActivitiesToFilter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllActivitiesToFilterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateAllActivitiesToFilterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:OutputTarget" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateOfficeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateOfficeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SelectTargetSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectTarget" />
+  </wsdl:message>
+  <wsdl:message name="SelectTargetSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectTargetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectTargetAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllTargetsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateAllTargets" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllTargetsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateAllTargetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllTargetsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateProjectTargets" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateProjectTargetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateTargetByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateTargetById" />
+  </wsdl:message>
+  <wsdl:message name="PopulateTargetByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateTargetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateTargetByIdAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="AddTargetSoapIn">
+    <wsdl:part name="parameters" element="tns:AddTarget" />
+  </wsdl:message>
+  <wsdl:message name="AddTargetSoapOut">
+    <wsdl:part name="parameters" element="tns:AddTargetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddTargetAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="AddProjectOutputTargetSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProjectOutputTarget" />
+  </wsdl:message>
+  <wsdl:message name="AddProjectOutputTargetSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProjectOutputTargetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProjectOutputTargetAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="SelectFrameworkSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectFramework" />
+  </wsdl:message>
+  <wsdl:message name="SelectFrameworkSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectFrameworkResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectFrameworkAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="SelectOutputSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectOutput" />
+  </wsdl:message>
+  <wsdl:message name="SelectOutputSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectOutputAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="populateOutputTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:populateOutputType" />
+  </wsdl:message>
+  <wsdl:message name="populateOutputTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:populateOutputTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="populateOutputTypeAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllOutputsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateAllOutputs" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllOutputsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateAllOutputsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllOutputsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOutputByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateOutputById" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOutputByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateOutputByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOutputByIdAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="AddOutputSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOutput" />
+  </wsdl:message>
+  <wsdl:message name="AddOutputSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOutputAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="populateSubSectorSoapIn">
+    <wsdl:part name="parameters" element="tns:populateSubSector" />
+  </wsdl:message>
+  <wsdl:message name="populateSubSectorSoapOut">
+    <wsdl:part name="parameters" element="tns:populateSubSectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="populateSubSectorAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSectorsToFilterSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateSectorsToFilter" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSectorsToFilterSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateSectorsToFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSectorsToFilterAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorsToFilterSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateSubSectorsToFilter" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorsToFilterSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateSubSectorsToFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorsToFilterAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllActivitiesToFilterSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateAllActivitiesToFilter" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllActivitiesToFilterSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateAllActivitiesToFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllActivitiesToFilterAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateOffice" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOfficeAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:portType name="OutputTargetServiceSoap">
+    <wsdl:operation name="SelectTarget">
+      <wsdl:input message="tns:SelectTargetSoapIn" />
+      <wsdl:output message="tns:SelectTargetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllTargets">
+      <wsdl:input message="tns:PopulateAllTargetsSoapIn" />
+      <wsdl:output message="tns:PopulateAllTargetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargets">
+      <wsdl:input message="tns:PopulateProjectTargetsSoapIn" />
+      <wsdl:output message="tns:PopulateProjectTargetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateTargetById">
+      <wsdl:input message="tns:PopulateTargetByIdSoapIn" />
+      <wsdl:output message="tns:PopulateTargetByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTarget">
+      <wsdl:input message="tns:AddTargetSoapIn" />
+      <wsdl:output message="tns:AddTargetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectOutputTarget">
+      <wsdl:input message="tns:AddProjectOutputTargetSoapIn" />
+      <wsdl:output message="tns:AddProjectOutputTargetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectFramework">
+      <wsdl:input message="tns:SelectFrameworkSoapIn" />
+      <wsdl:output message="tns:SelectFrameworkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectOutput">
+      <wsdl:input message="tns:SelectOutputSoapIn" />
+      <wsdl:output message="tns:SelectOutputSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="populateOutputType">
+      <wsdl:input message="tns:populateOutputTypeSoapIn" />
+      <wsdl:output message="tns:populateOutputTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllOutputs">
+      <wsdl:input message="tns:PopulateAllOutputsSoapIn" />
+      <wsdl:output message="tns:PopulateAllOutputsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOutputById">
+      <wsdl:input message="tns:PopulateOutputByIdSoapIn" />
+      <wsdl:output message="tns:PopulateOutputByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOutput">
+      <wsdl:input message="tns:AddOutputSoapIn" />
+      <wsdl:output message="tns:AddOutputSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="populateSubSector">
+      <wsdl:input message="tns:populateSubSectorSoapIn" />
+      <wsdl:output message="tns:populateSubSectorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSectorsToFilter">
+      <wsdl:input message="tns:PopulateSectorsToFilterSoapIn" />
+      <wsdl:output message="tns:PopulateSectorsToFilterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorsToFilter">
+      <wsdl:input message="tns:PopulateSubSectorsToFilterSoapIn" />
+      <wsdl:output message="tns:PopulateSubSectorsToFilterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllActivitiesToFilter">
+      <wsdl:input message="tns:PopulateAllActivitiesToFilterSoapIn" />
+      <wsdl:output message="tns:PopulateAllActivitiesToFilterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOffice">
+      <wsdl:input message="tns:PopulateOfficeSoapIn" />
+      <wsdl:output message="tns:PopulateOfficeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OutputTargetServiceSoap" type="tns:OutputTargetServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectTarget">
+      <soap:operation soapAction="http://tempuri.org/SelectTarget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SelectTargetAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllTargets">
+      <soap:operation soapAction="http://tempuri.org/PopulateAllTargets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateAllTargetsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargets">
+      <soap:operation soapAction="http://tempuri.org/PopulateProjectTargets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateProjectTargetsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateTargetById">
+      <soap:operation soapAction="http://tempuri.org/PopulateTargetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateTargetByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTarget">
+      <soap:operation soapAction="http://tempuri.org/AddTarget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddTargetAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectOutputTarget">
+      <soap:operation soapAction="http://tempuri.org/AddProjectOutputTarget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddProjectOutputTargetAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFramework">
+      <soap:operation soapAction="http://tempuri.org/SelectFramework" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SelectFrameworkAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectOutput">
+      <soap:operation soapAction="http://tempuri.org/SelectOutput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SelectOutputAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateOutputType">
+      <soap:operation soapAction="http://tempuri.org/populateOutputType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:populateOutputTypeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllOutputs">
+      <soap:operation soapAction="http://tempuri.org/PopulateAllOutputs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateAllOutputsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOutputById">
+      <soap:operation soapAction="http://tempuri.org/PopulateOutputById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateOutputByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOutput">
+      <soap:operation soapAction="http://tempuri.org/AddOutput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddOutputAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateSubSector">
+      <soap:operation soapAction="http://tempuri.org/populateSubSector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:populateSubSectorAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSectorsToFilter">
+      <soap:operation soapAction="http://tempuri.org/PopulateSectorsToFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateSectorsToFilterAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorsToFilter">
+      <soap:operation soapAction="http://tempuri.org/PopulateSubSectorsToFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateSubSectorsToFilterAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllActivitiesToFilter">
+      <soap:operation soapAction="http://tempuri.org/PopulateAllActivitiesToFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateAllActivitiesToFilterAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOffice">
+      <soap:operation soapAction="http://tempuri.org/PopulateOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OutputTargetServiceSoap12" type="tns:OutputTargetServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectTarget">
+      <soap12:operation soapAction="http://tempuri.org/SelectTarget" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SelectTargetAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllTargets">
+      <soap12:operation soapAction="http://tempuri.org/PopulateAllTargets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateAllTargetsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargets">
+      <soap12:operation soapAction="http://tempuri.org/PopulateProjectTargets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateProjectTargetsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateTargetById">
+      <soap12:operation soapAction="http://tempuri.org/PopulateTargetById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateTargetByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTarget">
+      <soap12:operation soapAction="http://tempuri.org/AddTarget" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddTargetAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectOutputTarget">
+      <soap12:operation soapAction="http://tempuri.org/AddProjectOutputTarget" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddProjectOutputTargetAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFramework">
+      <soap12:operation soapAction="http://tempuri.org/SelectFramework" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SelectFrameworkAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectOutput">
+      <soap12:operation soapAction="http://tempuri.org/SelectOutput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SelectOutputAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateOutputType">
+      <soap12:operation soapAction="http://tempuri.org/populateOutputType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:populateOutputTypeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllOutputs">
+      <soap12:operation soapAction="http://tempuri.org/PopulateAllOutputs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateAllOutputsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOutputById">
+      <soap12:operation soapAction="http://tempuri.org/PopulateOutputById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateOutputByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOutput">
+      <soap12:operation soapAction="http://tempuri.org/AddOutput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddOutputAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateSubSector">
+      <soap12:operation soapAction="http://tempuri.org/populateSubSector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:populateSubSectorAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSectorsToFilter">
+      <soap12:operation soapAction="http://tempuri.org/PopulateSectorsToFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateSectorsToFilterAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorsToFilter">
+      <soap12:operation soapAction="http://tempuri.org/PopulateSubSectorsToFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateSubSectorsToFilterAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllActivitiesToFilter">
+      <soap12:operation soapAction="http://tempuri.org/PopulateAllActivitiesToFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateAllActivitiesToFilterAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOffice">
+      <soap12:operation soapAction="http://tempuri.org/PopulateOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OutputTargetService">
+    <wsdl:port name="OutputTargetServiceSoap" binding="tns:OutputTargetServiceSoap">
+      <soap:address location="http://localhost:7404/OutputTargetService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OutputTargetServiceSoap12" binding="tns:OutputTargetServiceSoap12">
+      <soap12:address location="http://localhost:7404/OutputTargetService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

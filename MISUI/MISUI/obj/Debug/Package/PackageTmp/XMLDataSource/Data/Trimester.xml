@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TriType>
+  <TriType id="1" name="प्रथम"></TriType>
+  <TriType id="2" name="दोस्रो"></TriType>
+  <TriType id="3" name="तेस्रो"></TriType>
+  <!--<TriType id="4" name="वार्षिक"></TriType>-->
+</TriType>

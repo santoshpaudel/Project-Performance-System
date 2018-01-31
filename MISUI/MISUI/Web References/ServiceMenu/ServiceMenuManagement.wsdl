@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="menuId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="testResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMenuResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="FetchMenuHierarchy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="roleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMenuHierarchyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchMenuHierarchyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMenuPermission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="module" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="role" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMenuPermissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchMenuPermissionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePermission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objBo" type="tns:ComMenuRolePermissionBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ComMenuRolePermissionBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PermissionMapId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RoleId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MenuId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowAdd" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowDelete" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowEdit" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowVerifyLevel1" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowVerifyLevel2" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowVerifyLevel3" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowVerifyLevel4" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowView" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionMode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ChangePermissionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComMenu" type="tns:ComMenu" />
+            <s:element minOccurs="1" maxOccurs="1" name="entryMode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="menuId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ComMenu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="menuEnglishName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="menuNepaliName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="menuParentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="menuTypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="menuLevel" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="menuPath" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddMenuResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateMenuDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="menuId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateMenuDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateMenuDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="roleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMenuResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="testSoapIn">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="testSoapOut">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMenu" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMenuAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuHierarchySoapIn">
+    <wsdl:part name="parameters" element="tns:FetchMenuHierarchy" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuHierarchySoapOut">
+    <wsdl:part name="parameters" element="tns:FetchMenuHierarchyResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuHierarchyAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuPermissionSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchMenuPermission" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuPermissionSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchMenuPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuPermissionAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="ChangePermissionSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePermission" />
+  </wsdl:message>
+  <wsdl:message name="ChangePermissionSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePermissionAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="AddMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMenu" />
+  </wsdl:message>
+  <wsdl:message name="AddMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateMenuDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateMenuDetails" />
+  </wsdl:message>
+  <wsdl:message name="PopulateMenuDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateMenuDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchMenu" />
+  </wsdl:message>
+  <wsdl:message name="FetchMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchMenuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceMenuManagementSoap">
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testSoapIn" />
+      <wsdl:output message="tns:testSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenu">
+      <wsdl:input message="tns:DeleteMenuSoapIn" />
+      <wsdl:output message="tns:DeleteMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenuHierarchy">
+      <wsdl:input message="tns:FetchMenuHierarchySoapIn" />
+      <wsdl:output message="tns:FetchMenuHierarchySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenuPermission">
+      <wsdl:input message="tns:FetchMenuPermissionSoapIn" />
+      <wsdl:output message="tns:FetchMenuPermissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePermission">
+      <wsdl:input message="tns:ChangePermissionSoapIn" />
+      <wsdl:output message="tns:ChangePermissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMenu">
+      <wsdl:input message="tns:AddMenuSoapIn" />
+      <wsdl:output message="tns:AddMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateMenuDetails">
+      <wsdl:input message="tns:PopulateMenuDetailsSoapIn" />
+      <wsdl:output message="tns:PopulateMenuDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenu">
+      <wsdl:input message="tns:FetchMenuSoapIn" />
+      <wsdl:output message="tns:FetchMenuSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceMenuManagementSoap" type="tns:ServiceMenuManagementSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenu">
+      <soap:operation soapAction="http://tempuri.org/DeleteMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteMenuAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenuHierarchy">
+      <soap:operation soapAction="http://tempuri.org/FetchMenuHierarchy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FetchMenuHierarchyAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenuPermission">
+      <soap:operation soapAction="http://tempuri.org/FetchMenuPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FetchMenuPermissionAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePermission">
+      <soap:operation soapAction="http://tempuri.org/ChangePermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChangePermissionAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMenu">
+      <soap:operation soapAction="http://tempuri.org/AddMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateMenuDetails">
+      <soap:operation soapAction="http://tempuri.org/PopulateMenuDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenu">
+      <soap:operation soapAction="http://tempuri.org/FetchMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceMenuManagementSoap12" type="tns:ServiceMenuManagementSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="test">
+      <soap12:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenu">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteMenuAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenuHierarchy">
+      <soap12:operation soapAction="http://tempuri.org/FetchMenuHierarchy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FetchMenuHierarchyAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenuPermission">
+      <soap12:operation soapAction="http://tempuri.org/FetchMenuPermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FetchMenuPermissionAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePermission">
+      <soap12:operation soapAction="http://tempuri.org/ChangePermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChangePermissionAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMenu">
+      <soap12:operation soapAction="http://tempuri.org/AddMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateMenuDetails">
+      <soap12:operation soapAction="http://tempuri.org/PopulateMenuDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMenu">
+      <soap12:operation soapAction="http://tempuri.org/FetchMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceMenuManagement">
+    <wsdl:port name="ServiceMenuManagementSoap" binding="tns:ServiceMenuManagementSoap">
+      <soap:address location="http://localhost:7404/ServiceMenuManagement.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceMenuManagementSoap12" binding="tns:ServiceMenuManagementSoap12">
+      <soap12:address location="http://localhost:7404/ServiceMenuManagement.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

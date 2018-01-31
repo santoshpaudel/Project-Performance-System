@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddEditFramework">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFrameworkBO" type="tns:FrameworkBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FrameworkBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FrameworkId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrameworkEngName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrameworkNepName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BaseYearId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstYearId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondYearId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdYearId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEnable" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLocked" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lang" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddEditFrameworkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddEditFrameworkResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="PopulateFrameworkDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFrameworkBO" type="tns:FrameworkBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateFrameworkDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateFrameworkDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllFrameworks">
+        <s:complexType />
+      </s:element>
+      <s:element name="PopulateAllFrameworksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateAllFrameworksResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddEditFrameworkSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEditFramework" />
+  </wsdl:message>
+  <wsdl:message name="AddEditFrameworkSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEditFrameworkResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEditFrameworkAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateFrameworkDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateFrameworkDetails" />
+  </wsdl:message>
+  <wsdl:message name="PopulateFrameworkDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateFrameworkDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateFrameworkDetailsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllFrameworksSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateAllFrameworks" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllFrameworksSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateAllFrameworksResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllFrameworksAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:portType name="FrameworkManagementServiceSoap">
+    <wsdl:operation name="AddEditFramework">
+      <wsdl:input message="tns:AddEditFrameworkSoapIn" />
+      <wsdl:output message="tns:AddEditFrameworkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateFrameworkDetails">
+      <wsdl:input message="tns:PopulateFrameworkDetailsSoapIn" />
+      <wsdl:output message="tns:PopulateFrameworkDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllFrameworks">
+      <wsdl:input message="tns:PopulateAllFrameworksSoapIn" />
+      <wsdl:output message="tns:PopulateAllFrameworksSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FrameworkManagementServiceSoap" type="tns:FrameworkManagementServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddEditFramework">
+      <soap:operation soapAction="http://tempuri.org/AddEditFramework" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddEditFrameworkAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateFrameworkDetails">
+      <soap:operation soapAction="http://tempuri.org/PopulateFrameworkDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateFrameworkDetailsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllFrameworks">
+      <soap:operation soapAction="http://tempuri.org/PopulateAllFrameworks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateAllFrameworksAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FrameworkManagementServiceSoap12" type="tns:FrameworkManagementServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddEditFramework">
+      <soap12:operation soapAction="http://tempuri.org/AddEditFramework" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddEditFrameworkAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateFrameworkDetails">
+      <soap12:operation soapAction="http://tempuri.org/PopulateFrameworkDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateFrameworkDetailsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllFrameworks">
+      <soap12:operation soapAction="http://tempuri.org/PopulateAllFrameworks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateAllFrameworksAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FrameworkManagementService">
+    <wsdl:port name="FrameworkManagementServiceSoap" binding="tns:FrameworkManagementServiceSoap">
+      <soap:address location="http://localhost:7404/FrameworkManagementService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FrameworkManagementServiceSoap12" binding="tns:FrameworkManagementServiceSoap12">
+      <soap12:address location="http://localhost:7404/FrameworkManagementService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

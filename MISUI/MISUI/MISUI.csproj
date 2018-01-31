@@ -1,0 +1,3105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1F1C62B-33EE-4AAD-9AEC-0C9707D43206}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISUI</RootNamespace>
+    <AssemblyName>MISUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.4.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="amcharts\amcharts.js" />
+    <Content Include="amcharts\funnel.js" />
+    <Content Include="amcharts\gantt.js" />
+    <Content Include="amcharts\gauge.js" />
+    <Content Include="amcharts\images\dragIcon.gif" />
+    <Content Include="amcharts\images\dragIconBlack.gif" />
+    <Content Include="amcharts\images\dragIconH.gif" />
+    <Content Include="amcharts\images\dragIconHBlack.gif" />
+    <Content Include="amcharts\images\dragIconRectBig.png" />
+    <Content Include="amcharts\images\dragIconRectBig.svg" />
+    <Content Include="amcharts\images\dragIconRectBigBlack.png" />
+    <Content Include="amcharts\images\dragIconRectBigBlack.svg" />
+    <Content Include="amcharts\images\dragIconRectBigBlackH.png" />
+    <Content Include="amcharts\images\dragIconRectBigBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRectBigH.png" />
+    <Content Include="amcharts\images\dragIconRectBigH.svg" />
+    <Content Include="amcharts\images\dragIconRectSmall.png" />
+    <Content Include="amcharts\images\dragIconRectSmall.svg" />
+    <Content Include="amcharts\images\dragIconRectSmallBlack.png" />
+    <Content Include="amcharts\images\dragIconRectSmallBlack.svg" />
+    <Content Include="amcharts\images\dragIconRectSmallBlackH.png" />
+    <Content Include="amcharts\images\dragIconRectSmallBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRectSmallH.png" />
+    <Content Include="amcharts\images\dragIconRectSmallH.svg" />
+    <Content Include="amcharts\images\dragIconRoundBig.png" />
+    <Content Include="amcharts\images\dragIconRoundBig.svg" />
+    <Content Include="amcharts\images\dragIconRoundBigBlack.png" />
+    <Content Include="amcharts\images\dragIconRoundBigBlack.svg" />
+    <Content Include="amcharts\images\dragIconRoundBigBlackH.png" />
+    <Content Include="amcharts\images\dragIconRoundBigBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRoundBigH.png" />
+    <Content Include="amcharts\images\dragIconRoundBigH.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmall.png" />
+    <Content Include="amcharts\images\dragIconRoundSmall.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlack.png" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlack.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlackH.png" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmallH.png" />
+    <Content Include="amcharts\images\dragIconRoundSmallH.svg" />
+    <Content Include="amcharts\images\eraserIcon.svg" />
+    <Content Include="amcharts\images\eraserIconH.svg" />
+    <Content Include="amcharts\images\export.png" />
+    <Content Include="amcharts\images\exportWhite.png" />
+    <Content Include="amcharts\images\lens.png" />
+    <Content Include="amcharts\images\lens.svg" />
+    <Content Include="amcharts\images\lensWhite.png" />
+    <Content Include="amcharts\images\lensWhite.svg" />
+    <Content Include="amcharts\images\lensWhite_old.png" />
+    <Content Include="amcharts\images\lens_old.png" />
+    <Content Include="amcharts\images\pencilIcon.svg" />
+    <Content Include="amcharts\images\pencilIconH.svg" />
+    <Content Include="amcharts\images\xIcon.svg" />
+    <Content Include="amcharts\images\xIconH.svg" />
+    <Content Include="amcharts\lang\az.js" />
+    <Content Include="amcharts\lang\bg.js" />
+    <Content Include="amcharts\lang\de.js" />
+    <Content Include="amcharts\lang\es.js" />
+    <Content Include="amcharts\lang\fi.js" />
+    <Content Include="amcharts\lang\fo.js" />
+    <Content Include="amcharts\lang\fr.js" />
+    <Content Include="amcharts\lang\hr.js" />
+    <Content Include="amcharts\lang\hu.js" />
+    <Content Include="amcharts\lang\id.js" />
+    <Content Include="amcharts\lang\is.js" />
+    <Content Include="amcharts\lang\it.js" />
+    <Content Include="amcharts\lang\ja.js" />
+    <Content Include="amcharts\lang\lt.js" />
+    <Content Include="amcharts\lang\lv.js" />
+    <Content Include="amcharts\lang\mk.js" />
+    <Content Include="amcharts\lang\mn.js" />
+    <Content Include="amcharts\lang\mt.js" />
+    <Content Include="amcharts\lang\nl.js" />
+    <Content Include="amcharts\lang\no.js" />
+    <Content Include="amcharts\lang\pl.js" />
+    <Content Include="amcharts\lang\pt.js" />
+    <Content Include="amcharts\lang\ro.js" />
+    <Content Include="amcharts\lang\ru.js" />
+    <Content Include="amcharts\lang\rw.js" />
+    <Content Include="amcharts\lang\sk.js" />
+    <Content Include="amcharts\lang\so.js" />
+    <Content Include="amcharts\lang\th.js" />
+    <Content Include="amcharts\lang\tr.js" />
+    <Content Include="amcharts\lang\zh.js" />
+    <Content Include="amcharts\patterns\black\pattern1.png" />
+    <Content Include="amcharts\patterns\black\pattern10.png" />
+    <Content Include="amcharts\patterns\black\pattern11.png" />
+    <Content Include="amcharts\patterns\black\pattern12.png" />
+    <Content Include="amcharts\patterns\black\pattern13.png" />
+    <Content Include="amcharts\patterns\black\pattern14.png" />
+    <Content Include="amcharts\patterns\black\pattern15.png" />
+    <Content Include="amcharts\patterns\black\pattern16.png" />
+    <Content Include="amcharts\patterns\black\pattern17.png" />
+    <Content Include="amcharts\patterns\black\pattern18.png" />
+    <Content Include="amcharts\patterns\black\pattern19.png" />
+    <Content Include="amcharts\patterns\black\pattern2.png" />
+    <Content Include="amcharts\patterns\black\pattern20.png" />
+    <Content Include="amcharts\patterns\black\pattern21.png" />
+    <Content Include="amcharts\patterns\black\pattern3.png" />
+    <Content Include="amcharts\patterns\black\pattern4.png" />
+    <Content Include="amcharts\patterns\black\pattern5.png" />
+    <Content Include="amcharts\patterns\black\pattern6.png" />
+    <Content Include="amcharts\patterns\black\pattern7.png" />
+    <Content Include="amcharts\patterns\black\pattern8.png" />
+    <Content Include="amcharts\patterns\black\pattern9.png" />
+    <Content Include="amcharts\patterns\chalk\pattern1.jpg" />
+    <Content Include="amcharts\patterns\chalk\pattern1r.jpg" />
+    <Content Include="amcharts\patterns\chalk\pattern2.jpg" />
+    <Content Include="amcharts\patterns\chalk\pattern3.jpg" />
+    <Content Include="amcharts\patterns\chalk\pattern4.jpg" />
+    <Content Include="amcharts\patterns\chalk\pattern5.jpg" />
+    <Content Include="amcharts\patterns\chalk\pattern6.jpg" />
+    <Content Include="amcharts\patterns\white\pattern1.png" />
+    <Content Include="amcharts\patterns\white\pattern10.png" />
+    <Content Include="amcharts\patterns\white\pattern11.png" />
+    <Content Include="amcharts\patterns\white\pattern12.png" />
+    <Content Include="amcharts\patterns\white\pattern13.png" />
+    <Content Include="amcharts\patterns\white\pattern14.png" />
+    <Content Include="amcharts\patterns\white\pattern15.png" />
+    <Content Include="amcharts\patterns\white\pattern16.png" />
+    <Content Include="amcharts\patterns\white\pattern17.png" />
+    <Content Include="amcharts\patterns\white\pattern18.png" />
+    <Content Include="amcharts\patterns\white\pattern19.png" />
+    <Content Include="amcharts\patterns\white\pattern2.png" />
+    <Content Include="amcharts\patterns\white\pattern20.png" />
+    <Content Include="amcharts\patterns\white\pattern21.png" />
+    <Content Include="amcharts\patterns\white\pattern3.png" />
+    <Content Include="amcharts\patterns\white\pattern4.png" />
+    <Content Include="amcharts\patterns\white\pattern5.png" />
+    <Content Include="amcharts\patterns\white\pattern6.png" />
+    <Content Include="amcharts\patterns\white\pattern7.png" />
+    <Content Include="amcharts\patterns\white\pattern8.png" />
+    <Content Include="amcharts\patterns\white\pattern9.png" />
+    <Content Include="amcharts\pie.js" />
+    <Content Include="amcharts\plugins\dataloader\dataloader.js" />
+    <Content Include="amcharts\plugins\dataloader\dataloader.min.js" />
+    <Content Include="amcharts\plugins\dataloader\examples\gantt_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\gauge_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\map_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\map_json_external_function.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\pie_csv.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\pie_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial2_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial_csv.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial_with_dynamic_graphs.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\stock_csv_data_and_events.html" />
+    <Content Include="amcharts\plugins\dataloader\lang\en.js" />
+    <Content Include="amcharts\plugins\dataloader\lang\fr.js" />
+    <Content Include="amcharts\plugins\dataloader\lang\lt.js" />
+    <Content Include="amcharts\plugins\dataloader\license.txt" />
+    <Content Include="amcharts\plugins\export\examples\export.config.advanced.js" />
+    <Content Include="amcharts\plugins\export\examples\export.config.default.js" />
+    <Content Include="amcharts\plugins\export\examples\funnel.html" />
+    <Content Include="amcharts\plugins\export\examples\gantt.html" />
+    <Content Include="amcharts\plugins\export\examples\gauge.html" />
+    <Content Include="amcharts\plugins\export\examples\images\bicycle.png" />
+    <Content Include="amcharts\plugins\export\examples\images\car.png" />
+    <Content Include="amcharts\plugins\export\examples\images\motorcycle.png" />
+    <Content Include="amcharts\plugins\export\examples\index.html" />
+    <Content Include="amcharts\plugins\export\examples\map.html" />
+    <Content Include="amcharts\plugins\export\examples\pie1.html" />
+    <Content Include="amcharts\plugins\export\examples\pie2.html" />
+    <Content Include="amcharts\plugins\export\examples\pie3.html" />
+    <Content Include="amcharts\plugins\export\examples\pie4.html" />
+    <Content Include="amcharts\plugins\export\examples\radar.html" />
+    <Content Include="amcharts\plugins\export\examples\serial1.html" />
+    <Content Include="amcharts\plugins\export\examples\serial2.html" />
+    <Content Include="amcharts\plugins\export\examples\serial3.html" />
+    <Content Include="amcharts\plugins\export\examples\stock.html" />
+    <Content Include="amcharts\plugins\export\examples\xy.html" />
+    <Content Include="amcharts\plugins\export\export.css" />
+    <Content Include="amcharts\plugins\export\export.js" />
+    <Content Include="amcharts\plugins\export\export.min.js" />
+    <Content Include="amcharts\plugins\export\lang\de.js" />
+    <Content Include="amcharts\plugins\export\lang\en.js" />
+    <Content Include="amcharts\plugins\export\lang\fr.js" />
+    <Content Include="amcharts\plugins\export\lang\lt.js" />
+    <Content Include="amcharts\plugins\export\lang\pl.js" />
+    <Content Include="amcharts\plugins\export\libs\blob.js\blob.js" />
+    <Content Include="amcharts\plugins\export\libs\fabric.js\fabric.js" />
+    <Content Include="amcharts\plugins\export\libs\fabric.js\fabric.min.js" />
+    <Content Include="amcharts\plugins\export\libs\FileSaver.js\FileSaver.js" />
+    <Content Include="amcharts\plugins\export\libs\FileSaver.js\FileSaver.min.js" />
+    <Content Include="amcharts\plugins\export\libs\jszip\jszip.js" />
+    <Content Include="amcharts\plugins\export\libs\jszip\jszip.min.js" />
+    <Content Include="amcharts\plugins\export\libs\pdfmake\pdfmake.js" />
+    <Content Include="amcharts\plugins\export\libs\pdfmake\pdfmake.min.js" />
+    <Content Include="amcharts\plugins\export\libs\pdfmake\vfs_fonts.js" />
+    <Content Include="amcharts\plugins\export\libs\xlsx\xlsx.js" />
+    <Content Include="amcharts\plugins\export\libs\xlsx\xlsx.min.js" />
+    <Content Include="amcharts\plugins\export\shapes\1.svg" />
+    <Content Include="amcharts\plugins\export\shapes\10.svg" />
+    <Content Include="amcharts\plugins\export\shapes\11.svg" />
+    <Content Include="amcharts\plugins\export\shapes\12.svg" />
+    <Content Include="amcharts\plugins\export\shapes\13.svg" />
+    <Content Include="amcharts\plugins\export\shapes\14.svg" />
+    <Content Include="amcharts\plugins\export\shapes\15.svg" />
+    <Content Include="amcharts\plugins\export\shapes\16.svg" />
+    <Content Include="amcharts\plugins\export\shapes\17.svg" />
+    <Content Include="amcharts\plugins\export\shapes\18.svg" />
+    <Content Include="amcharts\plugins\export\shapes\19.svg" />
+    <Content Include="amcharts\plugins\export\shapes\2.svg" />
+    <Content Include="amcharts\plugins\export\shapes\20.svg" />
+    <Content Include="amcharts\plugins\export\shapes\21.svg" />
+    <Content Include="amcharts\plugins\export\shapes\22.svg" />
+    <Content Include="amcharts\plugins\export\shapes\23.svg" />
+    <Content Include="amcharts\plugins\export\shapes\24.svg" />
+    <Content Include="amcharts\plugins\export\shapes\25.svg" />
+    <Content Include="amcharts\plugins\export\shapes\26.svg" />
+    <Content Include="amcharts\plugins\export\shapes\27.svg" />
+    <Content Include="amcharts\plugins\export\shapes\28.svg" />
+    <Content Include="amcharts\plugins\export\shapes\29.svg" />
+    <Content Include="amcharts\plugins\export\shapes\3.svg" />
+    <Content Include="amcharts\plugins\export\shapes\30.svg" />
+    <Content Include="amcharts\plugins\export\shapes\31.svg" />
+    <Content Include="amcharts\plugins\export\shapes\4.svg" />
+    <Content Include="amcharts\plugins\export\shapes\5.svg" />
+    <Content Include="amcharts\plugins\export\shapes\6.svg" />
+    <Content Include="amcharts\plugins\export\shapes\7.svg" />
+    <Content Include="amcharts\plugins\export\shapes\8.svg" />
+    <Content Include="amcharts\plugins\export\shapes\9.svg" />
+    <Content Include="amcharts\plugins\responsive\examples\funnel.html" />
+    <Content Include="amcharts\plugins\responsive\examples\gantt.html" />
+    <Content Include="amcharts\plugins\responsive\examples\gauge.html" />
+    <Content Include="amcharts\plugins\responsive\examples\images\bicycle.png" />
+    <Content Include="amcharts\plugins\responsive\examples\images\car.png" />
+    <Content Include="amcharts\plugins\responsive\examples\images\motorcycle.png" />
+    <Content Include="amcharts\plugins\responsive\examples\index.html" />
+    <Content Include="amcharts\plugins\responsive\examples\map.html" />
+    <Content Include="amcharts\plugins\responsive\examples\pie1.html" />
+    <Content Include="amcharts\plugins\responsive\examples\pie2.html" />
+    <Content Include="amcharts\plugins\responsive\examples\pie3.html" />
+    <Content Include="amcharts\plugins\responsive\examples\radar.html" />
+    <Content Include="amcharts\plugins\responsive\examples\serial1.html" />
+    <Content Include="amcharts\plugins\responsive\examples\serial2.html" />
+    <Content Include="amcharts\plugins\responsive\examples\serial3.html" />
+    <Content Include="amcharts\plugins\responsive\examples\stock.html" />
+    <Content Include="amcharts\plugins\responsive\examples\xy.html" />
+    <Content Include="amcharts\plugins\responsive\license.txt" />
+    <Content Include="amcharts\plugins\responsive\responsive.js" />
+    <Content Include="amcharts\plugins\responsive\responsive.min.js" />
+    <Content Include="amcharts\radar.js" />
+    <Content Include="amcharts\serial.js" />
+    <Content Include="amcharts\themes\black.js" />
+    <Content Include="amcharts\themes\chalk.js" />
+    <Content Include="amcharts\themes\dark.js" />
+    <Content Include="amcharts\themes\light.js" />
+    <Content Include="amcharts\themes\patterns.js" />
+    <Content Include="amcharts\xy.js" />
+    <Content Include="assets\avatars\avatar.png" />
+    <Content Include="assets\avatars\avatar1.png" />
+    <Content Include="assets\avatars\avatar2.png" />
+    <Content Include="assets\avatars\avatar3.png" />
+    <Content Include="assets\avatars\avatar4.png" />
+    <Content Include="assets\avatars\avatar5.png" />
+    <Content Include="assets\avatars\profile-pic.jpg" />
+    <Content Include="assets\avatars\tri.png" />
+    <Content Include="assets\avatars\user.jpg" />
+    <Content Include="assets\css\ace-fonts.css" />
+    <Content Include="assets\css\ace-ie.css" />
+    <Content Include="assets\css\ace-part2.css" />
+    <Content Include="assets\css\ace-rtl.css" />
+    <Content Include="assets\css\ace-skins.css" />
+    <Content Include="assets\css\ace.css" />
+    <Content Include="assets\css\ace.onpage-help.css" />
+    <Content Include="assets\css\bootstrap-datetimepicker.css" />
+    <Content Include="assets\css\bootstrap-duallistbox.css" />
+    <Content Include="assets\css\bootstrap-editable.css" />
+    <Content Include="assets\css\bootstrap-multiselect.css" />
+    <Content Include="assets\css\bootstrap-timepicker.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\chosen-sprite%402x.png" />
+    <Content Include="assets\css\chosen-sprite.png" />
+    <Content Include="assets\css\chosen.css" />
+    <Content Include="assets\css\colorbox.css" />
+    <Content Include="assets\css\colorpicker.css" />
+    <Content Include="assets\css\datepicker.css" />
+    <Content Include="assets\css\daterangepicker.css" />
+    <Content Include="assets\css\dropzone.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\fullcalendar.css" />
+    <Content Include="assets\css\fullcalendar.print.css" />
+    <Content Include="assets\css\images\border.png" />
+    <Content Include="assets\css\images\border1.png" />
+    <Content Include="assets\css\images\border2.png" />
+    <Content Include="assets\css\images\controls.png" />
+    <Content Include="assets\css\images\ie6\borderBottomCenter.png" />
+    <Content Include="assets\css\images\ie6\borderBottomLeft.png" />
+    <Content Include="assets\css\images\ie6\borderBottomRight.png" />
+    <Content Include="assets\css\images\ie6\borderMiddleLeft.png" />
+    <Content Include="assets\css\images\ie6\borderMiddleRight.png" />
+    <Content Include="assets\css\images\ie6\borderTopCenter.png" />
+    <Content Include="assets\css\images\ie6\borderTopLeft.png" />
+    <Content Include="assets\css\images\ie6\borderTopRight.png" />
+    <Content Include="assets\css\images\loading.gif" />
+    <Content Include="assets\css\images\loading_background.png" />
+    <Content Include="assets\css\images\meteorshower.jpg" />
+    <Content Include="assets\css\images\meteorshower2.jpg" />
+    <Content Include="assets\css\images\overlay.png" />
+    <Content Include="assets\css\images\pattern.jpg" />
+    <Content Include="assets\css\images\pattern.png" />
+    <Content Include="assets\css\images\spritemap%402x.png" />
+    <Content Include="assets\css\images\spritemap.png" />
+    <Content Include="assets\css\img\alpha.png" />
+    <Content Include="assets\css\img\hue.png" />
+    <Content Include="assets\css\img\saturation.png" />
+    <Content Include="assets\css\jquery-ui.css" />
+    <Content Include="assets\css\jquery-ui.custom.css" />
+    <Content Include="assets\css\jquery.gritter.css" />
+    <Content Include="assets\css\pace.css" />
+    <Content Include="assets\css\prettify.css" />
+    <Content Include="assets\css\select2-spinner.gif" />
+    <Content Include="assets\css\select2.css" />
+    <Content Include="assets\css\select2.png" />
+    <Content Include="assets\css\select2x2.png" />
+    <Content Include="assets\css\ui.jqgrid.css" />
+    <Content Include="assets\images\back_disabled.png" />
+    <Content Include="assets\images\back_enabled.png" />
+    <Content Include="assets\images\back_enabled_hover.png" />
+    <Content Include="assets\images\email1.png" />
+    <Content Include="assets\images\email2.png" />
+    <Content Include="assets\images\email3.png" />
+    <Content Include="assets\images\email4.png" />
+    <Content Include="assets\images\forward_disabled.png" />
+    <Content Include="assets\images\forward_enabled.png" />
+    <Content Include="assets\images\forward_enabled_hover.png" />
+    <Content Include="assets\images\gallery\image-1.jpg" />
+    <Content Include="assets\images\gallery\image-2.jpg" />
+    <Content Include="assets\images\gallery\image-3.jpg" />
+    <Content Include="assets\images\gallery\image-4.jpg" />
+    <Content Include="assets\images\gallery\image-5.jpg" />
+    <Content Include="assets\images\gallery\image-6.jpg" />
+    <Content Include="assets\images\gallery\thumb-1.jpg" />
+    <Content Include="assets\images\gallery\thumb-2.jpg" />
+    <Content Include="assets\images\gallery\thumb-3.jpg" />
+    <Content Include="assets\images\gallery\thumb-4.jpg" />
+    <Content Include="assets\images\gallery\thumb-5.jpg" />
+    <Content Include="assets\images\gallery\thumb-6.jpg" />
+    <Content Include="assets\images\sort_asc.png" />
+    <Content Include="assets\images\sort_asc_disabled.png" />
+    <Content Include="assets\images\sort_both.png" />
+    <Content Include="assets\images\sort_desc.png" />
+    <Content Include="assets\images\sort_desc_disabled.png" />
+    <Content Include="assets\images\spritemap%402x.png" />
+    <Content Include="assets\images\spritemap.png" />
+    <Content Include="assets\img\clear.png" />
+    <Content Include="assets\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\img\glyphicons-halflings.png" />
+    <Content Include="assets\img\loading.gif" />
+    <Content Include="assets\js\ace-elements.js" />
+    <Content Include="assets\js\ace-extra.js" />
+    <Content Include="assets\js\ace.js" />
+    <Content Include="assets\js\ace\ace.ajax-content.js" />
+    <Content Include="assets\js\ace\ace.auto-container.js" />
+    <Content Include="assets\js\ace\ace.auto-padding.js" />
+    <Content Include="assets\js\ace\ace.js" />
+    <Content Include="assets\js\ace\ace.onpage-help.js" />
+    <Content Include="assets\js\ace\ace.searchbox-autocomplete.js" />
+    <Content Include="assets\js\ace\ace.settings-rtl.js" />
+    <Content Include="assets\js\ace\ace.settings-skin.js" />
+    <Content Include="assets\js\ace\ace.settings.js" />
+    <Content Include="assets\js\ace\ace.sidebar-scroll-1.js" />
+    <Content Include="assets\js\ace\ace.sidebar-scroll-2.js" />
+    <Content Include="assets\js\ace\ace.sidebar.js" />
+    <Content Include="assets\js\ace\ace.submenu-hover.js" />
+    <Content Include="assets\js\ace\ace.touch-drag.js" />
+    <Content Include="assets\js\ace\ace.widget-box.js" />
+    <Content Include="assets\js\ace\ace.widget-on-reload.js" />
+    <Content Include="assets\js\ace\elements.aside.js" />
+    <Content Include="assets\js\ace\elements.colorpicker.js" />
+    <Content Include="assets\js\ace\elements.fileinput.js" />
+    <Content Include="assets\js\ace\elements.onpage-help.js" />
+    <Content Include="assets\js\ace\elements.scroller.js" />
+    <Content Include="assets\js\ace\elements.spinner.js" />
+    <Content Include="assets\js\ace\elements.treeview.js" />
+    <Content Include="assets\js\ace\elements.typeahead.js" />
+    <Content Include="assets\js\ace\elements.wizard.js" />
+    <Content Include="assets\js\ace\elements.wysiwyg.js" />
+    <Content Include="assets\js\additional-methods.js" />
+    <Content Include="assets\js\bootbox.js" />
+    <Content Include="assets\js\bootstrap-colorpicker.js" />
+    <Content Include="assets\js\bootstrap-multiselect.js" />
+    <Content Include="assets\js\bootstrap-tag.js" />
+    <Content Include="assets\js\bootstrap-wysiwyg.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\chosen.jquery.js" />
+    <Content Include="assets\js\dataTables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="assets\js\dataTables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="assets\js\dataTables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="assets\js\dataTables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="assets\js\dataTables\jquery.dataTables.bootstrap.js" />
+    <Content Include="assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="assets\js\date-time\bootstrap-datepicker.js" />
+    <Content Include="assets\js\date-time\bootstrap-datetimepicker.js" />
+    <Content Include="assets\js\date-time\bootstrap-timepicker.js" />
+    <Content Include="assets\js\date-time\daterangepicker.js" />
+    <Content Include="assets\js\date-time\moment.js" />
+    <Content Include="assets\js\dropzone.js" />
+    <Content Include="assets\js\excanvas.js" />
+    <Content Include="assets\js\filtercombo\chosen-sprite%402x.png" />
+    <Content Include="assets\js\filtercombo\chosen-sprite.png" />
+    <Content Include="assets\js\filtercombo\chosen.css" />
+    <Content Include="assets\js\filtercombo\chosen.jquery.js" />
+    <Content Include="assets\js\filtercombo\jquery-1.10.2.min.js" />
+    <Content Include="assets\js\filtercombo\test.html" />
+    <Content Include="assets\js\flot\jquery.flot.js" />
+    <Content Include="assets\js\flot\jquery.flot.pie.js" />
+    <Content Include="assets\js\flot\jquery.flot.resize.js" />
+    <Content Include="assets\js\fuelux\fuelux.spinner.js" />
+    <Content Include="assets\js\fuelux\fuelux.tree.js" />
+    <Content Include="assets\js\fuelux\fuelux.wizard.js" />
+    <Content Include="assets\js\fullcalendar.js" />
+    <Content Include="assets\js\html5shiv.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ar.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-bg.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-bg1251.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-cat.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-cn.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-cs.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-da.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-de.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-dk.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-el.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-fa.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-fi.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-gl.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-he.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-hr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-hr1250.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-hu.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-id.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-is.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ja.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-kr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-lt.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-mne.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-nl.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-no.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-pl.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ro.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ru.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sk.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sv.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-th.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-tr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-tw.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ua.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-vi.js" />
+    <Content Include="assets\js\jqGrid\jquery.jqGrid.src.js" />
+    <Content Include="assets\js\jquery-ui.custom.js" />
+    <Content Include="assets\js\jquery-ui.js" />
+    <Content Include="assets\js\jquery.autosize.js" />
+    <Content Include="assets\js\jquery.bootstrap-duallistbox.js" />
+    <Content Include="assets\js\jquery.colorbox.js" />
+    <Content Include="assets\js\jquery.easypiechart.js" />
+    <Content Include="assets\js\jquery.gritter.js" />
+    <Content Include="assets\js\jquery.hotkeys.js" />
+    <Content Include="assets\js\jquery.inputlimiter.1.3.1.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.knob.js" />
+    <Content Include="assets\js\jquery.maskedinput.js" />
+    <Content Include="assets\js\jquery.mobile.custom.js" />
+    <Content Include="assets\js\jquery.mousewheel.js" />
+    <Content Include="assets\js\jquery.nestable.js" />
+    <Content Include="assets\js\jquery.raty.js" />
+    <Content Include="assets\js\jquery.slimscroll.js" />
+    <Content Include="assets\js\jquery.sparkline.js" />
+    <Content Include="assets\js\jquery.ui.touch-punch.js" />
+    <Content Include="assets\js\jquery.validate.js" />
+    <Content Include="assets\js\jquery1x.js" />
+    <Content Include="assets\js\markdown\bootstrap-markdown.js" />
+    <Content Include="assets\js\markdown\markdown.js" />
+    <Content Include="assets\js\markdown\to-markdown.js" />
+    <Content Include="assets\js\pace.js" />
+    <Content Include="assets\js\prettify.js" />
+    <Content Include="assets\js\respond.js" />
+    <Content Include="assets\js\select2.js" />
+    <Content Include="assets\js\spin.js" />
+    <Content Include="assets\js\typeahead.jquery.js" />
+    <Content Include="assets\js\x-editable\ace-editable.js" />
+    <Content Include="assets\js\x-editable\bootstrap-editable.js" />
+    <Content Include="bin\DropDownCheckBoxes.dll" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_cs.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_da.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_de.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_en.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_es.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_fi.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_fr.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_hu.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_it.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ja.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ko.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_nb.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_nl.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_pl.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_pt.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ru.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_sk.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_sv.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_th.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_tr.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_zh_CN.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_zh_TW.cab" />
+    <Content Include="crystalreportviewers13\allInOne.js" />
+    <Content Include="crystalreportviewers13\allStrings_cs.js" />
+    <Content Include="crystalreportviewers13\allStrings_da.js" />
+    <Content Include="crystalreportviewers13\allStrings_de.js" />
+    <Content Include="crystalreportviewers13\allStrings_en.js" />
+    <Content Include="crystalreportviewers13\allStrings_es.js" />
+    <Content Include="crystalreportviewers13\allStrings_fi.js" />
+    <Content Include="crystalreportviewers13\allStrings_fr.js" />
+    <Content Include="crystalreportviewers13\allStrings_hu.js" />
+    <Content Include="crystalreportviewers13\allStrings_it.js" />
+    <Content Include="crystalreportviewers13\allStrings_ja.js" />
+    <Content Include="crystalreportviewers13\allStrings_ko.js" />
+    <Content Include="crystalreportviewers13\allStrings_nb.js" />
+    <Content Include="crystalreportviewers13\allStrings_nl.js" />
+    <Content Include="crystalreportviewers13\allStrings_pl.js" />
+    <Content Include="crystalreportviewers13\allStrings_pt.js" />
+    <Content Include="crystalreportviewers13\allStrings_ru.js" />
+    <Content Include="crystalreportviewers13\allStrings_sk.js" />
+    <Content Include="crystalreportviewers13\allStrings_sv.js" />
+    <Content Include="crystalreportviewers13\allStrings_th.js" />
+    <Content Include="crystalreportviewers13\allStrings_tr.js" />
+    <Content Include="crystalreportviewers13\allStrings_zh_CN.js" />
+    <Content Include="crystalreportviewers13\allStrings_zh_TW.js" />
+    <Content Include="crystalreportviewers13\css\cedefault.css" />
+    <Content Include="crystalreportviewers13\css\default.css" />
+    <Content Include="crystalreportviewers13\css\exception.css" />
+    <Content Include="crystalreportviewers13\css\prompting.css" />
+    <Content Include="crystalreportviewers13\html\calendar.html" />
+    <Content Include="crystalreportviewers13\html\calendarbottom.html" />
+    <Content Include="crystalreportviewers13\html\calendartop.html" />
+    <Content Include="crystalreportviewers13\images\buttonl.gif" />
+    <Content Include="crystalreportviewers13\images\buttonm.gif" />
+    <Content Include="crystalreportviewers13\images\buttonr.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive50.gif" />
+    <Content Include="crystalreportviewers13\js\calendar.js" />
+    <Content Include="crystalreportviewers13\js\calendar_param.js" />
+    <Content Include="crystalreportviewers13\js\crviewerinclude.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\api.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ArgumentNormalizer.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\bobjcallback.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ButtonList.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Calendar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Colors.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\common.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\crv.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Dialogs.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\dom.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\encoding.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\event.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\GroupTree.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\GroupTreeListener.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\GroupTreeNode.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\html.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ImageSprites.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\allInOne.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\allInOneBG.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\arrow_button_depressed.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\arrow_button_hover.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\breadcrumbSep.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\calendar.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\catalyst.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\clearValues.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\clear_x.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\closePanel.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\delete.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\drill_cursor.cur" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\export.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\filledCircle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\first.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\grouptree_toggle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\hollowCircle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\last.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\leftTriangle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\line.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\logo.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\magnify.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\min.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\next.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\open_parameter_arrow.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panelHeaderBG.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panelNavigatorItemHL.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panelNavigatorItemSelectedBG.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panel_toggle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_datafetching.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_dirty.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_info.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_run.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_warning.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\plus.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\prev.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\print.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\refresh.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\rightTriangle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\search.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\separator.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\StackedTab.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\style.css" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_background.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_background.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_left.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_right.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_button_depressed.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_button_hover.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_menuarrow_depressed.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_menuarrow_hover.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_pagenav_buttons.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_separator_icon.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\undo.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\up.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\WarningPopupTriangle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\initDhtmlLib.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\IOAdapters.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\LeftPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\OptionalParameterUI.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\OptionalParameterValueRow.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PanelHeader.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PanelNavigator.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PanelNavigatorItem.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Parameter.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterController.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterDialog.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterInfoRow.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterPanelToolbar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterUI.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterValueRow.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PromptPage.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\RangeField.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ReportAlbum.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ReportPage.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ReportView.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Separator.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\SharedWidgetHolder.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\SignalDisposer.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\StackedPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\StackedTab.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\StateManager.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Statusbar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_cs.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_da.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_de.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_en.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_es.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_fi.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_fr.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_hu.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_it.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_ja.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_ko.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_nb.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_nl.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_pl.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_pt.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_ru.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_sk.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_sv.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_th.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_tr.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_zh_CN.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_zh_TW.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\TextCombo.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\TextField.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Toolbar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ToolPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Viewer.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ViewerFlexParameterAdapter.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ViewerListener.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\WarningPopup.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\bolist.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\calendar.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\dialog.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\dom.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\empty.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\borders.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\help.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\loading.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\lov.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\min.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\plus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\print.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\print_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\prompt.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\resizepattern.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\background_field.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\background_menusel.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\critical_icon.png" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\hgrab.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\horiz_tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\menuitem_check.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\panemenu.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\panetitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\toolbar_elements.png" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\vgrab.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\swap.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\transp.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\tree.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\cs\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\da\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\de\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\en\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\es\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\fi\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\fr\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\hu\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\it\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\ja\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\ko\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\nb\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\nl\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\pl\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\pt\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\ru\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\sk\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\sv\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\th\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\tr\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\zh_CN\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\zh_TW\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\lov.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\menu.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\palette.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\prompttree.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\psheet.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\andorwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\basicDialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\blockWhileWait.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\bolist.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\borderswidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\buttons.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\calendar.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\checktree.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\default.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim_close.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim_o.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim_open.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\empty.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\eventsDialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\fieldswidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\format.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\framezone.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\grabber.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\iconlistpopupwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\iconscrollmenuwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\imgtabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\inconwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\infowidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\lov.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\measure.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\measure_o.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\menu.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\navigation.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\palettes.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\pane.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\parent_dialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\progressBar.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\prompttree.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\qualif.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\scrolltabs.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\simplelist.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\skinIntl.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\tabs.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\textcombowidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\tooltipwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\treeicons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\treeview.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\unv_close.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\unv_o.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\unv_open.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\waitDialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\treeview.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\validator\default.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\validator\validator_res.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\waitdialog.js" />
+    <Content Include="crystalreportviewers13\js\dt_param.js" />
+    <Content Include="crystalreportviewers13\js\external\date.js" />
+    <Content Include="crystalreportviewers13\js\FlexParameterBridge.js" />
+    <Content Include="crystalreportviewers13\js\KeyDownEvent.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript_stub.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript_stub_uncompressed.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript_uncompressed.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\main.css" />
+    <Content Include="crystalreportviewers13\js\MochiKit\3rdParty.txt" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Async.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Base.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Color.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Controls.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\DateTime.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\DOM.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\DragAndDrop.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Format.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Iter.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\License.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Logging.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\LoggingPane.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\MochiKit.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\MockDOM.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\New.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Signal.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Sortable.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Style.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Test.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Visual.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\__package__.js" />
+    <Content Include="crystalreportviewers13\js\previewerror.js" />
+    <Content Include="crystalreportviewers13\js\prompts.js" />
+    <Content Include="crystalreportviewers13\js\prompts_param.js" />
+    <Content Include="crystalreportviewers13\js\swfobject\swfobject.js" />
+    <Content Include="crystalreportviewers13\parameterUIController-compressed.js" />
+    <Content Include="crystalreportviewers13\processindicator.js" />
+    <Content Include="crystalreportviewers13\promptengine-compressed.js" />
+    <Content Include="crystalreportviewers13\prompting\css\promptengine2.css" />
+    <Content Include="crystalreportviewers13\prompting\css\promptengine_default.css" />
+    <Content Include="crystalreportviewers13\prompting\html\calendar.html" />
+    <Content Include="crystalreportviewers13\prompting\html\calendarbottom.html" />
+    <Content Include="crystalreportviewers13\prompting\html\calendartop.html" />
+    <Content Include="crystalreportviewers13\prompting\images\addallfield.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\addallfield_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\addfield.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\addfield_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\back.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\background_field.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\back_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button_left_normal.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button_middle_normal.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button_right_normal.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\calendar.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\cfilter.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\cfilter_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\error.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\errormsg.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\filter.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\filter_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\forward.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\forward_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\info.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\infomsg.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\minus.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\next.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\next_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\plus.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\prev.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\prev_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\resize.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\transp.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\warning.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\warningmsg.gif" />
+    <Content Include="crystalreportviewers13\prompting\js\initDhtmlLib.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_calendar2.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_prompts.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_prompts2.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_cs.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_da.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_de.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_en.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_es.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_fi.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_fr.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_hu.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_it.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_ja.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_ko.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_nb.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_nl.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_pl.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_pt.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_ru.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_sk.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_sv.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_th.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_tr.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_zh_CN.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
+    <Content Include="crystalreportviewers13\urlreporting\activexviewer.js" />
+    <Content Include="crystalreportviewers13\urlreporting\appletviewer.js" />
+    <Content Include="CrystalViewer\ProjectTrans\NewProjectViewer.aspx" />
+    <Content Include="CrystalViewer\ProjectTrans\ProjectNatijaViewer.aspx" />
+    <Content Include="CrystalViewer\ProjectTrans\ProjectPragatiViewer.aspx" />
+    <Content Include="CrystalViewer\ProjectTrans\ProjectPratifalViewer.aspx" />
+    <Content Include="CrystalViewer\ProjectTrans\ProjectSamastigatViewer.aspx" />
+    <Content Include="CrystalViewer\ProjectTrans\ProjectStatusProblemsEffortsViewer.aspx" />
+    <Content Include="CrystalViewer\ProjectTrans\ProjectUpdateViewer.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\loginCss.css" />
+    <Content Include="docs\assets\js\language\css.js" />
+    <Content Include="docs\assets\js\language\generic.js" />
+    <Content Include="docs\assets\js\language\html.js" />
+    <Content Include="docs\assets\js\language\javascript.js" />
+    <Content Include="docs\assets\js\language\php.js" />
+    <Content Include="docs\assets\js\rainbow.js" />
+    <Content Include="docs\assets\js\rainbow.min.js" />
+    <Content Include="docs\assets\js\themes\all-hallows-eve.css" />
+    <Content Include="docs\assets\js\themes\blackboard.css" />
+    <Content Include="docs\assets\js\themes\dreamweaver.css" />
+    <Content Include="docs\assets\js\themes\espresso-libre.css" />
+    <Content Include="docs\assets\js\themes\github.css" />
+    <Content Include="docs\assets\js\themes\kimbie-dark.css" />
+    <Content Include="docs\assets\js\themes\kimbie-light.css" />
+    <Content Include="docs\assets\js\themes\monokai.css" />
+    <Content Include="docs\assets\js\themes\obsidian.css" />
+    <Content Include="docs\assets\js\themes\paraiso-dark.css" />
+    <Content Include="docs\assets\js\themes\paraiso-light.css" />
+    <Content Include="docs\assets\js\themes\pastie.css" />
+    <Content Include="docs\assets\js\themes\solarized-dark.css" />
+    <Content Include="docs\assets\js\themes\solarized-light.css" />
+    <Content Include="docs\assets\js\themes\sunburst.css" />
+    <Content Include="docs\assets\js\themes\tomorrow-night.css" />
+    <Content Include="docs\assets\js\themes\tricolore.css" />
+    <Content Include="docs\assets\js\themes\twilight.css" />
+    <Content Include="docs\assets\js\themes\zenburnesque.css" />
+    <Content Include="docs\blank.html" />
+    <Content Include="docs\images\active.png" />
+    <Content Include="docs\images\default.png" />
+    <Content Include="docs\images\help-icon1.png" />
+    <Content Include="docs\images\help-icon2.png" />
+    <Content Include="docs\images\help-include-all.png" />
+    <Content Include="docs\images\help-panels.png" />
+    <Content Include="docs\images\navbar-mobile1.png" />
+    <Content Include="docs\images\navbar-mobile2.png" />
+    <Content Include="docs\images\navbar.png" />
+    <Content Include="docs\images\new-toggle.png" />
+    <Content Include="docs\images\old-toggle.png" />
+    <Content Include="docs\images\scroll-content.png" />
+    <Content Include="docs\images\sidebar-mobile1.png" />
+    <Content Include="docs\images\sidebar-mobile2.png" />
+    <Content Include="docs\images\sidebar.png" />
+    <Content Include="docs\images\tabbed-dropdown.png" />
+    <Content Include="docs\images\tabless-inbox.png" />
+    <Content Include="docs\images\toggle-sidebar-1.png" />
+    <Content Include="docs\images\toggle-sidebar-11.png" />
+    <Content Include="docs\images\toggle-sidebar-3.png" />
+    <Content Include="docs\images\user-menu.png" />
+    <Content Include="docs\index.html" />
+    <Content Include="docs\sections\basics\ajax.html" />
+    <Content Include="docs\sections\basics\content.html" />
+    <Content Include="docs\sections\basics\footer.html" />
+    <Content Include="docs\sections\basics\layout.html" />
+    <Content Include="docs\sections\basics\navbar.html" />
+    <Content Include="docs\sections\basics\sidebar.html" />
+    <Content Include="docs\sections\changes\index.html" />
+    <Content Include="docs\sections\credits\index.html" />
+    <Content Include="docs\sections\custom\checkbox.html" />
+    <Content Include="docs\sections\custom\colorpicker.html" />
+    <Content Include="docs\sections\custom\content-slider.html" />
+    <Content Include="docs\sections\custom\extra.html" />
+    <Content Include="docs\sections\custom\file-input.html" />
+    <Content Include="docs\sections\custom\index.html" />
+    <Content Include="docs\sections\custom\inline-editable.html" />
+    <Content Include="docs\sections\custom\onpage-help.html" />
+    <Content Include="docs\sections\custom\scrollbar.html" />
+    <Content Include="docs\sections\custom\widget-box.html" />
+    <Content Include="docs\sections\elements\index.html" />
+    <Content Include="docs\sections\files\css.html" />
+    <Content Include="docs\sections\files\examples.html" />
+    <Content Include="docs\sections\files\html.html" />
+    <Content Include="docs\sections\files\javascript.html" />
+    <Content Include="docs\sections\files\mustache.html" />
+    <Content Include="docs\sections\intro\index.html" />
+    <Content Include="docs\sections\issues\index.html" />
+    <Content Include="docs\sections\pages\dashboard.html" />
+    <Content Include="docs\sections\pages\email.html" />
+    <Content Include="docs\sections\pages\error.html" />
+    <Content Include="docs\sections\pages\faq.html" />
+    <Content Include="docs\sections\pages\gallery.html" />
+    <Content Include="docs\sections\pages\inbox.html" />
+    <Content Include="docs\sections\pages\invoice.html" />
+    <Content Include="docs\sections\pages\login.html" />
+    <Content Include="docs\sections\pages\pricing.html" />
+    <Content Include="docs\sections\pages\profile.html" />
+    <Content Include="docs\sections\pages\timeline.html" />
+    <Content Include="docs\sections\plugins\bootstrap.html" />
+    <Content Include="docs\sections\plugins\charts.html" />
+    <Content Include="docs\sections\plugins\date-time.html" />
+    <Content Include="docs\sections\plugins\editor.html" />
+    <Content Include="docs\sections\plugins\fuelux.html" />
+    <Content Include="docs\sections\plugins\input.html" />
+    <Content Include="docs\sections\plugins\jquery.html" />
+    <Content Include="docs\sections\plugins\misc.html" />
+    <Content Include="docs\sections\plugins\tables.html" />
+    <Content Include="docs\sections\plugins\tools.html" />
+    <Content Include="docs\sections\settings\index.html" />
+    <Content Include="dropdownnCheck.aspx" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\download.png" />
+    <Content Include="images\flag_nepal.png" />
+    <Content Include="images\flag_UK.png" />
+    <Content Include="images\NPC_banner2.png" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\view.png" />
+    <Content Include="js\ajaxGetPost.js" />
+    <Content Include="js\chosen.jquery.min.js" />
+    <Content Include="js\chosen.min.css" />
+    <Content Include="js\dataTables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="js\dataTables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="js\dataTables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="js\dataTables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="js\dataTables\jquery.dataTables.bootstrap.js" />
+    <Content Include="js\dataTables\jquery.dataTables.js" />
+    <Content Include="js\Modules\ActivityDetails.js" />
+    <Content Include="js\Modules\ActivityOutput.js" />
+    <Content Include="js\Modules\AddRole.js" />
+    <Content Include="js\Validator.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Modules\ActivityManagement\ActivityOutputMap.aspx" />
+    <Content Include="Modules\ActivityManagement\AddActivityDetail.aspx" />
+    <Content Include="Modules\BarsikKaryekram\BarsikKaryekram.aspx" />
+    <Content Include="Modules\BarsikKaryekram\ListProjectBarshikKaryakram.aspx" />
+    <Content Include="Modules\BarsikKaryekram\ListProjectBarshikPratifal.aspx" />
+    <Content Include="Modules\BarsikKaryekram\ListProjectKaryakramPragati.aspx" />
+    <Content Include="Modules\BarsikKaryekram\ListProjectKaryakramPratifal.aspx" />
+    <Content Include="Modules\BarsikKaryekram\ListProjectNatijaPragati.aspx" />
+    <Content Include="Modules\BarsikKaryekram\KaryekramPragati.aspx" />
+    <Content Include="Modules\BarsikKaryekram\ListProjectNatijaBarsik.aspx" />
+    <Content Include="Modules\BarsikKaryekram\ProjectProblems.aspx" />
+    <Content Include="Modules\Budget\AddBudgetDonar.aspx" />
+    <Content Include="Modules\Budget\AddBudgetHead.aspx" />
+    <Content Include="Modules\Budget\BudgetDonarsList.aspx" />
+    <Content Include="Modules\Budget\BudgetToOrganizationMap.aspx" />
+    <Content Include="Modules\Budget\BudgHeadList1.aspx" />
+    <Content Include="Modules\DirectoryManagement\AddMinistry.aspx" />
+    <Content Include="Modules\DirectoryManagement\AddMunVdc.aspx" />
+    <Content Include="Modules\DirectoryManagement\MinistryList.aspx" />
+    <Content Include="Modules\DirectoryManagement\VdcMunList.aspx" />
+    <Content Include="Modules\FrameworkManagement\AddEditFramework.aspx" />
+    <Content Include="Modules\FrameworkManagement\FrameworkList.aspx" />
+    <Content Include="Modules\OfficeManagement\AddOffice.aspx" />
+    <Content Include="Modules\OutputTargetManagement\AddOutput.aspx" />
+    <Content Include="Modules\OutputTargetManagement\AddProjectOutput.aspx" />
+    <Content Include="Modules\OutputTargetManagement\AddProjectOutputProgress.aspx" />
+    <Content Include="Modules\OutputTargetManagement\AddTarget.aspx" />
+    <Content Include="Modules\OutputTargetManagement\ListOutput.aspx" />
+    <Content Include="Modules\OutputTargetManagement\ListTarget.aspx" />
+    <Content Include="Modules\ProjectManagement\AddEditProject.aspx" />
+    <Content Include="Modules\ProjectManagement\AddEditProjectAdministrativeDetails.aspx" />
+    <Content Include="Modules\ProjectManagement\AddEditProjectCostingTiming.aspx" />
+    <Content Include="Modules\ProjectManagement\AddEditProjectOtherDetails.aspx" />
+    <Content Include="Modules\ProjectManagement\ListProjectTarget.aspx" />
+    <Content Include="Modules\ProjectManagement\ProjectBasicVerificationList.aspx" />
+    <Content Include="Modules\ProjectManagement\ProjectList.aspx" />
+    <Content Include="Modules\ProjectManagement\ProjectPratifalVerificationList.aspx" />
+    <Content Include="Modules\ProjectManagement\ProjectProgressList.aspx" />
+    <Content Include="Modules\ProjectManagement\ProjectSamastigatVerificationList.aspx" />
+    <Content Include="Modules\ProjectManagement\PSPEVerificationList.aspx" />
+    <Content Include="Modules\ProjectManagement\ReportVerificationList.aspx" />
+    <Content Include="Modules\ProjectManagement\VerificationList.aspx" />
+    <Content Include="Modules\RananitiKaryanitiManagement\AddEditKaryaniti.aspx" />
+    <Content Include="Modules\RananitiKaryanitiManagement\AddEditRananiti.aspx" />
+    <Content Include="Modules\RananitiKaryanitiManagement\ListKaryaniti.aspx" />
+    <Content Include="Modules\RananitiKaryanitiManagement\ListRananiti.aspx" />
+    <Content Include="Modules\RoleManagement\AddRole.aspx" />
+    <Content Include="Modules\SectorManagement\AddEditSubSector.aspx" />
+    <Content Include="Modules\SectorManagement\ListSubSector.aspx" />
+    <Content Include="Modules\UserManagement\AddUser.aspx" />
+    <Content Include="Base.aspx" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.pdb" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.xml" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.pdb" />
+    <Content Include="bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.pdb" />
+    <Content Include="bin\Microsoft.Practices.Unity.pdb" />
+    <Content Include="bin\MISUICOMMON.dll" />
+    <Content Include="bin\MISUICOMMON.pdb" />
+    <Content Include="Controls\UCMenu.ascx" />
+    <Content Include="dist\jstree.js" />
+    <Content Include="dist\jstree.min.js" />
+    <Content Include="dist\themes\default-dark\32px.png" />
+    <Content Include="dist\themes\default-dark\40px.png" />
+    <Content Include="dist\themes\default-dark\style.css" />
+    <Content Include="dist\themes\default-dark\style.min.css" />
+    <Content Include="dist\themes\default-dark\throbber.gif" />
+    <Content Include="dist\themes\default\32px.png" />
+    <Content Include="dist\themes\default\40px.png" />
+    <Content Include="dist\themes\default\style.css" />
+    <Content Include="dist\themes\default\style.min.css" />
+    <Content Include="dist\themes\default\throbber.gif" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\delete.gif" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\Edit.png" />
+    <Content Include="images\flag_nepal.jpg" />
+    <Content Include="images\flag_UK.jpg" />
+    <Content Include="images\wrightMark.gif" />
+    <Content Include="img\arrows-active.html" />
+    <Content Include="img\arrow_up.png" />
+    <Content Include="img\backgrounds\body.jpg" />
+    <Content Include="img\backgrounds\body_bcrosshatch.jpg" />
+    <Content Include="img\backgrounds\body_crosshatch.jpg" />
+    <Content Include="img\backgrounds\body_cube.jpg" />
+    <Content Include="img\backgrounds\body_dots.jpg" />
+    <Content Include="img\backgrounds\body_grid.jpg" />
+    <Content Include="img\backgrounds\body_hLine.jpg" />
+    <Content Include="img\backgrounds\body_vLine.jpg" />
+    <Content Include="img\backgrounds\divider.png" />
+    <Content Include="img\backgrounds\divider_span.png" />
+    <Content Include="img\backgrounds\menu.jpg" />
+    <Content Include="img\backgrounds\nav.jpg" />
+    <Content Include="img\b_logo.png" />
+    <Content Include="img\checkbox\bg-input-focus.png" />
+    <Content Include="img\checkbox\bg-input.png" />
+    <Content Include="img\checkbox\sprite.png" />
+    <Content Include="img\cleditor\buttons.gif" />
+    <Content Include="img\cleditor\toolbar.gif" />
+    <Content Include="img\datatable\sort_asc.png" />
+    <Content Include="img\datatable\sort_asc_disabled.png" />
+    <Content Include="img\datatable\sort_both.png" />
+    <Content Include="img\datatable\sort_desc.png" />
+    <Content Include="img\datatable\sort_desc_disabled.png" />
+    <Content Include="img\elfinder\arrows-active.png" />
+    <Content Include="img\elfinder\arrows-normal.png" />
+    <Content Include="img\elfinder\dialogs.png" />
+    <Content Include="img\elfinder\elfinder\crop.html" />
+    <Content Include="img\elfinder\icons-big.png" />
+    <Content Include="img\elfinder\icons-small.png" />
+    <Content Include="img\elfinder\logo.html" />
+    <Content Include="img\elfinder\progress.gif" />
+    <Content Include="img\elfinder\quicklook-bg.png" />
+    <Content Include="img\elfinder\quicklook-icons.png" />
+    <Content Include="img\elfinder\resize.png" />
+    <Content Include="img\elfinder\spinner-mini.gif" />
+    <Content Include="img\elfinder\toolbar.png" />
+    <Content Include="img\example.jpg" />
+    <Content Include="img\example_full.jpg" />
+    <Content Include="img\example_mini.jpg" />
+    <Content Include="img\example_xmini.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\ibutton\ibutton-slider-default.png" />
+    <Content Include="img\icons\bb\ic_archive.png" />
+    <Content Include="img\icons\bb\ic_attachment.png" />
+    <Content Include="img\icons\bb\ic_bookmark.png" />
+    <Content Include="img\icons\bb\ic_brush.png" />
+    <Content Include="img\icons\bb\ic_calc.png" />
+    <Content Include="img\icons\bb\ic_calendar.png" />
+    <Content Include="img\icons\bb\ic_cancel.png" />
+    <Content Include="img\icons\bb\ic_chat.png" />
+    <Content Include="img\icons\bb\ic_chats.png" />
+    <Content Include="img\icons\bb\ic_cloud.png" />
+    <Content Include="img\icons\bb\ic_delete.png" />
+    <Content Include="img\icons\bb\ic_documents.png" />
+    <Content Include="img\icons\bb\ic_down.png" />
+    <Content Include="img\icons\bb\ic_download.png" />
+    <Content Include="img\icons\bb\ic_down_circle.png" />
+    <Content Include="img\icons\bb\ic_edit.png" />
+    <Content Include="img\icons\bb\ic_empty_document.png" />
+    <Content Include="img\icons\bb\ic_favorite.png" />
+    <Content Include="img\icons\bb\ic_folder.png" />
+    <Content Include="img\icons\bb\ic_fullscreen.png" />
+    <Content Include="img\icons\bb\ic_graph.png" />
+    <Content Include="img\icons\bb\ic_grid.png" />
+    <Content Include="img\icons\bb\ic_left.png" />
+    <Content Include="img\icons\bb\ic_left_circle.png" />
+    <Content Include="img\icons\bb\ic_list.png" />
+    <Content Include="img\icons\bb\ic_lock.png" />
+    <Content Include="img\icons\bb\ic_mail.png" />
+    <Content Include="img\icons\bb\ic_minus.png" />
+    <Content Include="img\icons\bb\ic_ok.png" />
+    <Content Include="img\icons\bb\ic_picture.png" />
+    <Content Include="img\icons\bb\ic_pin.png" />
+    <Content Include="img\icons\bb\ic_plus.png" />
+    <Content Include="img\icons\bb\ic_power.png" />
+    <Content Include="img\icons\bb\ic_print.png" />
+    <Content Include="img\icons\bb\ic_refresh.png" />
+    <Content Include="img\icons\bb\ic_right.png" />
+    <Content Include="img\icons\bb\ic_right_circle.png" />
+    <Content Include="img\icons\bb\ic_settings.png" />
+    <Content Include="img\icons\bb\ic_sound.png" />
+    <Content Include="img\icons\bb\ic_sync.png" />
+    <Content Include="img\icons\bb\ic_tag.png" />
+    <Content Include="img\icons\bb\ic_target.png" />
+    <Content Include="img\icons\bb\ic_text_document.png" />
+    <Content Include="img\icons\bb\ic_time.png" />
+    <Content Include="img\icons\bb\ic_unlock.png" />
+    <Content Include="img\icons\bb\ic_up.png" />
+    <Content Include="img\icons\bb\ic_up_circle.png" />
+    <Content Include="img\icons\bb\ic_user.png" />
+    <Content Include="img\icons\bb\ic_users.png" />
+    <Content Include="img\icons\bb\ic_zoom.png" />
+    <Content Include="img\icons\bs\ic_archive.png" />
+    <Content Include="img\icons\bs\ic_attachment.png" />
+    <Content Include="img\icons\bs\ic_bookmark.png" />
+    <Content Include="img\icons\bs\ic_brush.png" />
+    <Content Include="img\icons\bs\ic_calc.png" />
+    <Content Include="img\icons\bs\ic_calendar.png" />
+    <Content Include="img\icons\bs\ic_cancel.png" />
+    <Content Include="img\icons\bs\ic_chat.png" />
+    <Content Include="img\icons\bs\ic_chats.png" />
+    <Content Include="img\icons\bs\ic_cloud.png" />
+    <Content Include="img\icons\bs\ic_delete.png" />
+    <Content Include="img\icons\bs\ic_documents.png" />
+    <Content Include="img\icons\bs\ic_down.png" />
+    <Content Include="img\icons\bs\ic_download.png" />
+    <Content Include="img\icons\bs\ic_down_circle.png" />
+    <Content Include="img\icons\bs\ic_edit.png" />
+    <Content Include="img\icons\bs\ic_empty_document.png" />
+    <Content Include="img\icons\bs\ic_favorite.png" />
+    <Content Include="img\icons\bs\ic_folder.png" />
+    <Content Include="img\icons\bs\ic_fullscreen.png" />
+    <Content Include="img\icons\bs\ic_graph.png" />
+    <Content Include="img\icons\bs\ic_grid.png" />
+    <Content Include="img\icons\bs\ic_left.png" />
+    <Content Include="img\icons\bs\ic_left_circle.png" />
+    <Content Include="img\icons\bs\ic_list.png" />
+    <Content Include="img\icons\bs\ic_lock.png" />
+    <Content Include="img\icons\bs\ic_mail.png" />
+    <Content Include="img\icons\bs\ic_minus.png" />
+    <Content Include="img\icons\bs\ic_ok.png" />
+    <Content Include="img\icons\bs\ic_picture.png" />
+    <Content Include="img\icons\bs\ic_pin.png" />
+    <Content Include="img\icons\bs\ic_plus.png" />
+    <Content Include="img\icons\bs\ic_power.png" />
+    <Content Include="img\icons\bs\ic_print.png" />
+    <Content Include="img\icons\bs\ic_refresh.png" />
+    <Content Include="img\icons\bs\ic_right.png" />
+    <Content Include="img\icons\bs\ic_right_circle.png" />
+    <Content Include="img\icons\bs\ic_settings.png" />
+    <Content Include="img\icons\bs\ic_sound.png" />
+    <Content Include="img\icons\bs\ic_sync.png" />
+    <Content Include="img\icons\bs\ic_tag.png" />
+    <Content Include="img\icons\bs\ic_target.png" />
+    <Content Include="img\icons\bs\ic_text_document.png" />
+    <Content Include="img\icons\bs\ic_time.png" />
+    <Content Include="img\icons\bs\ic_unlock.png" />
+    <Content Include="img\icons\bs\ic_up.png" />
+    <Content Include="img\icons\bs\ic_up_circle.png" />
+    <Content Include="img\icons\bs\ic_user.png" />
+    <Content Include="img\icons\bs\ic_users.png" />
+    <Content Include="img\icons\bs\ic_zoom.png" />
+    <Content Include="img\icons\wb\ic_archive.png" />
+    <Content Include="img\icons\wb\ic_attachment.png" />
+    <Content Include="img\icons\wb\ic_bookmark.png" />
+    <Content Include="img\icons\wb\ic_brush.png" />
+    <Content Include="img\icons\wb\ic_calc.png" />
+    <Content Include="img\icons\wb\ic_calendar.png" />
+    <Content Include="img\icons\wb\ic_cancel.png" />
+    <Content Include="img\icons\wb\ic_chat.png" />
+    <Content Include="img\icons\wb\ic_chats.png" />
+    <Content Include="img\icons\wb\ic_cloud.png" />
+    <Content Include="img\icons\wb\ic_delete.png" />
+    <Content Include="img\icons\wb\ic_documents.png" />
+    <Content Include="img\icons\wb\ic_down.png" />
+    <Content Include="img\icons\wb\ic_download.png" />
+    <Content Include="img\icons\wb\ic_down_circle.png" />
+    <Content Include="img\icons\wb\ic_edit.png" />
+    <Content Include="img\icons\wb\ic_empty_document.png" />
+    <Content Include="img\icons\wb\ic_favorite.png" />
+    <Content Include="img\icons\wb\ic_folder.png" />
+    <Content Include="img\icons\wb\ic_fullscreen.png" />
+    <Content Include="img\icons\wb\ic_graph.png" />
+    <Content Include="img\icons\wb\ic_grid.png" />
+    <Content Include="img\icons\wb\ic_left.png" />
+    <Content Include="img\icons\wb\ic_left_circle.png" />
+    <Content Include="img\icons\wb\ic_list.png" />
+    <Content Include="img\icons\wb\ic_lock.png" />
+    <Content Include="img\icons\wb\ic_mail.png" />
+    <Content Include="img\icons\wb\ic_minus.png" />
+    <Content Include="img\icons\wb\ic_ok.png" />
+    <Content Include="img\icons\wb\ic_picture.png" />
+    <Content Include="img\icons\wb\ic_pin.png" />
+    <Content Include="img\icons\wb\ic_plus.png" />
+    <Content Include="img\icons\wb\ic_power.png" />
+    <Content Include="img\icons\wb\ic_print.png" />
+    <Content Include="img\icons\wb\ic_refresh.png" />
+    <Content Include="img\icons\wb\ic_right.png" />
+    <Content Include="img\icons\wb\ic_right_circle.png" />
+    <Content Include="img\icons\wb\ic_settings.png" />
+    <Content Include="img\icons\wb\ic_sound.png" />
+    <Content Include="img\icons\wb\ic_sync.png" />
+    <Content Include="img\icons\wb\ic_tag.png" />
+    <Content Include="img\icons\wb\ic_target.png" />
+    <Content Include="img\icons\wb\ic_text_document.png" />
+    <Content Include="img\icons\wb\ic_time.png" />
+    <Content Include="img\icons\wb\ic_unlock.png" />
+    <Content Include="img\icons\wb\ic_up.png" />
+    <Content Include="img\icons\wb\ic_up_circle.png" />
+    <Content Include="img\icons\wb\ic_user.png" />
+    <Content Include="img\icons\wb\ic_users.png" />
+    <Content Include="img\icons\wb\ic_zoom.png" />
+    <Content Include="img\icons\ws\ic_archive.png" />
+    <Content Include="img\icons\ws\ic_attachment.png" />
+    <Content Include="img\icons\ws\ic_bookmark.png" />
+    <Content Include="img\icons\ws\ic_brush.png" />
+    <Content Include="img\icons\ws\ic_calc.png" />
+    <Content Include="img\icons\ws\ic_calendar.png" />
+    <Content Include="img\icons\ws\ic_cancel.png" />
+    <Content Include="img\icons\ws\ic_chat.png" />
+    <Content Include="img\icons\ws\ic_chats.png" />
+    <Content Include="img\icons\ws\ic_cloud.png" />
+    <Content Include="img\icons\ws\ic_delete.png" />
+    <Content Include="img\icons\ws\ic_documents.png" />
+    <Content Include="img\icons\ws\ic_down.png" />
+    <Content Include="img\icons\ws\ic_download.png" />
+    <Content Include="img\icons\ws\ic_down_circle.png" />
+    <Content Include="img\icons\ws\ic_edit.png" />
+    <Content Include="img\icons\ws\ic_empty_document.png" />
+    <Content Include="img\icons\ws\ic_favorite.png" />
+    <Content Include="img\icons\ws\ic_folder.png" />
+    <Content Include="img\icons\ws\ic_fullscreen.png" />
+    <Content Include="img\icons\ws\ic_graph.png" />
+    <Content Include="img\icons\ws\ic_grid.png" />
+    <Content Include="img\icons\ws\ic_left.png" />
+    <Content Include="img\icons\ws\ic_left_circle.png" />
+    <Content Include="img\icons\ws\ic_list.png" />
+    <Content Include="img\icons\ws\ic_lock.png" />
+    <Content Include="img\icons\ws\ic_mail.png" />
+    <Content Include="img\icons\ws\ic_minus.png" />
+    <Content Include="img\icons\ws\ic_ok.png" />
+    <Content Include="img\icons\ws\ic_picture.png" />
+    <Content Include="img\icons\ws\ic_pin.png" />
+    <Content Include="img\icons\ws\ic_plus.png" />
+    <Content Include="img\icons\ws\ic_power.png" />
+    <Content Include="img\icons\ws\ic_print.png" />
+    <Content Include="img\icons\ws\ic_refresh.png" />
+    <Content Include="img\icons\ws\ic_right.png" />
+    <Content Include="img\icons\ws\ic_right_circle.png" />
+    <Content Include="img\icons\ws\ic_settings.png" />
+    <Content Include="img\icons\ws\ic_sound.png" />
+    <Content Include="img\icons\ws\ic_sync.png" />
+    <Content Include="img\icons\ws\ic_tag.png" />
+    <Content Include="img\icons\ws\ic_target.png" />
+    <Content Include="img\icons\ws\ic_text_document.png" />
+    <Content Include="img\icons\ws\ic_time.png" />
+    <Content Include="img\icons\ws\ic_unlock.png" />
+    <Content Include="img\icons\ws\ic_up.png" />
+    <Content Include="img\icons\ws\ic_up_circle.png" />
+    <Content Include="img\icons\ws\ic_user.png" />
+    <Content Include="img\icons\ws\ic_users.png" />
+    <Content Include="img\icons\ws\ic_zoom.png" />
+    <Content Include="img\loaders\c_loader.gif" />
+    <Content Include="img\loaders\c_loader_bw.gif" />
+    <Content Include="img\loaders\c_loader_ge.gif" />
+    <Content Include="img\loaders\c_loader_gr.gif" />
+    <Content Include="img\loaders\c_loader_re.gif" />
+    <Content Include="img\loaders\c_loader_wh.gif" />
+    <Content Include="img\loaders\c_loader_ye.gif" />
+    <Content Include="img\loaders\loader.gif" />
+    <Content Include="img\loaders\loader_bw.gif" />
+    <Content Include="img\loaders\loader_ge.gif" />
+    <Content Include="img\loaders\loader_gr.gif" />
+    <Content Include="img\loaders\loader_re.gif" />
+    <Content Include="img\loaders\loader_wh.gif" />
+    <Content Include="img\loaders\loader_ye.gif" />
+    <Content Include="img\loaders\s_loader.gif" />
+    <Content Include="img\loaders\s_loader_bw.gif" />
+    <Content Include="img\loaders\s_loader_ge.gif" />
+    <Content Include="img\loaders\s_loader_gr.gif" />
+    <Content Include="img\loaders\s_loader_re.gif" />
+    <Content Include="img\loaders\s_loader_wh.gif" />
+    <Content Include="img\loaders\s_loader_ye.gif" />
+    <Content Include="img\loaders\w_loader.gif" />
+    <Content Include="img\loaders\w_loader_bw.gif" />
+    <Content Include="img\loaders\w_loader_ge.gif" />
+    <Content Include="img\loaders\w_loader_gr.gif" />
+    <Content Include="img\loaders\w_loader_re.gif" />
+    <Content Include="img\loaders\w_loader_wh.gif" />
+    <Content Include="img\loaders\w_loader_ye.gif" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\menu-arrow-down.png" />
+    <Content Include="img\menu-arrow-right.png" />
+    <Content Include="img\menu-arrow-top.png" />
+    <Content Include="img\select2\select2.png" />
+    <Content Include="img\select2\select2x2.png" />
+    <Content Include="img\select2\spinner.gif" />
+    <Content Include="img\status.html" />
+    <Content Include="img\styles\dark\arrow-top.png" />
+    <Content Include="img\styles\dark\arrow.png" />
+    <Content Include="img\styles\dark\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\dark\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\dark\backgrounds\header.jpg" />
+    <Content Include="img\styles\dark\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\dark\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\dark\header_menu_list.png" />
+    <Content Include="img\styles\dark\header_menu_settings.png" />
+    <Content Include="img\styles\dark\menu_arrow_down.png" />
+    <Content Include="img\styles\dark\menu_arrow_up.png" />
+    <Content Include="img\styles\default\arrow-top.png" />
+    <Content Include="img\styles\default\arrow.png" />
+    <Content Include="img\styles\default\arrow_down.png" />
+    <Content Include="img\styles\default\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\default\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\default\backgrounds\header.jpg" />
+    <Content Include="img\styles\default\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\default\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\default\header_menu_list.png" />
+    <Content Include="img\styles\default\header_menu_settings.png" />
+    <Content Include="img\styles\default\menu_arrow_down.png" />
+    <Content Include="img\styles\default\menu_arrow_up.png" />
+    <Content Include="img\styles\green\arrow-top.png" />
+    <Content Include="img\styles\green\arrow.png" />
+    <Content Include="img\styles\green\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\green\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\green\backgrounds\header.jpg" />
+    <Content Include="img\styles\green\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\green\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\green\header_menu_list.png" />
+    <Content Include="img\styles\green\header_menu_settings.png" />
+    <Content Include="img\styles\green\menu_arrow_down.png" />
+    <Content Include="img\styles\green\menu_arrow_up.png" />
+    <Content Include="img\styles\lime\arrow-top.png" />
+    <Content Include="img\styles\lime\arrow.png" />
+    <Content Include="img\styles\lime\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\lime\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\lime\backgrounds\header.jpg" />
+    <Content Include="img\styles\lime\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\lime\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\lime\header_menu_list.png" />
+    <Content Include="img\styles\lime\header_menu_settings.png" />
+    <Content Include="img\styles\lime\menu_arrow_down.png" />
+    <Content Include="img\styles\lime\menu_arrow_up.png" />
+    <Content Include="img\styles\marble\arrow-top.png" />
+    <Content Include="img\styles\marble\arrow.png" />
+    <Content Include="img\styles\marble\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\marble\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\marble\backgrounds\header.jpg" />
+    <Content Include="img\styles\marble\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\marble\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\marble\header_menu_list.png" />
+    <Content Include="img\styles\marble\header_menu_settings.png" />
+    <Content Include="img\styles\marble\menu_arrow_down.png" />
+    <Content Include="img\styles\marble\menu_arrow_up.png" />
+    <Content Include="img\styles\purple\arrow-top.png" />
+    <Content Include="img\styles\purple\arrow.png" />
+    <Content Include="img\styles\purple\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\purple\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\purple\backgrounds\header.jpg" />
+    <Content Include="img\styles\purple\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\purple\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\purple\header_menu_list.png" />
+    <Content Include="img\styles\purple\header_menu_settings.png" />
+    <Content Include="img\styles\purple\menu_arrow_down.png" />
+    <Content Include="img\styles\purple\menu_arrow_up.png" />
+    <Content Include="img\styles\red\arrow-top.png" />
+    <Content Include="img\styles\red\arrow.png" />
+    <Content Include="img\styles\red\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\red\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\red\backgrounds\header.jpg" />
+    <Content Include="img\styles\red\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\red\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\red\header_menu_list.png" />
+    <Content Include="img\styles\red\header_menu_settings.png" />
+    <Content Include="img\styles\red\menu_arrow_down.png" />
+    <Content Include="img\styles\red\menu_arrow_up.png" />
+    <Content Include="img\styles\silver\arrow-top.png" />
+    <Content Include="img\styles\silver\arrow.png" />
+    <Content Include="img\styles\silver\backgrounds\box-head-active.jpg" />
+    <Content Include="img\styles\silver\backgrounds\box-head.jpg" />
+    <Content Include="img\styles\silver\backgrounds\header.jpg" />
+    <Content Include="img\styles\silver\backgrounds\menu-item-active.jpg" />
+    <Content Include="img\styles\silver\backgrounds\menu-item.jpg" />
+    <Content Include="img\styles\silver\header_menu_list.png" />
+    <Content Include="img\styles\silver\header_menu_settings.png" />
+    <Content Include="img\styles\silver\menu_arrow_down.png" />
+    <Content Include="img\styles\silver\menu_arrow_up.png" />
+    <Content Include="img\switch.png" />
+    <Content Include="img\textarea_top_arrow.png" />
+    <Content Include="img\ui\close.png" />
+    <Content Include="img\ui\dateArrows.png" />
+    <Content Include="img\ui\pboverlay.png" />
+    <Content Include="img\ui\slider.png" />
+    <Content Include="img\ui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="img\ui\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="img\ui\ui-icons_222222_256x240.png" />
+    <Content Include="img\ui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="img\ui\ui-icons_454545_256x240.png" />
+    <Content Include="img\ui\ui-icons_888888_256x240.png" />
+    <Content Include="img\ui\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="img\users\alexander.jpg" />
+    <Content Include="img\users\alexander_s.jpg" />
+    <Content Include="img\users\alexey.jpg" />
+    <Content Include="img\users\alexey_s.jpg" />
+    <Content Include="img\users\aqvatarius.jpg" />
+    <Content Include="img\users\aqvatarius_s.jpg" />
+    <Content Include="img\users\dmitry.jpg" />
+    <Content Include="img\users\dmitry_s.jpg" />
+    <Content Include="img\users\helen.jpg" />
+    <Content Include="img\users\helen_s.jpg" />
+    <Content Include="img\users\olga.jpg" />
+    <Content Include="img\users\olga_s.jpg" />
+    <Content Include="img\users\user_bg.jpg" />
+    <Content Include="img\users\user_profile.jpg" />
+    <Content Include="js\actions.js" />
+    <Content Include="js\charts.js" />
+    <Content Include="js\cookies.js" />
+    <Content Include="js\faq.js" />
+    <Content Include="js\mail.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\plugins\animatedprogressbar\animated_progressbar.js" />
+    <Content Include="js\plugins\bootstrap.min.js" />
+    <Content Include="js\plugins\charts\chart.min.js" />
+    <Content Include="js\plugins\charts\excanvas.min.js" />
+    <Content Include="js\plugins\charts\jquery.flot.js" />
+    <Content Include="js\plugins\charts\jquery.flot.pie.js" />
+    <Content Include="js\plugins\charts\jquery.flot.resize.js" />
+    <Content Include="js\plugins\charts\jquery.flot.stack.js" />
+    <Content Include="js\plugins\cleditor\jquery.cleditor.js" />
+    <Content Include="js\plugins\cookie\jquery.cookies.2.2.0.min.js" />
+    <Content Include="js\plugins\dataTables\jquery.dataTables.min.js" />
+    <Content Include="js\plugins\elfinder\elfinder.min.js" />
+    <Content Include="js\plugins\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="js\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="js\plugins\highlight\jquery.highlight-4.js" />
+    <Content Include="js\plugins\ibutton\jquery.ibutton.min.js" />
+    <Content Include="js\plugins\jquery\jquery-1.10.2.min.js" />
+    <Content Include="js\plugins\jquery\jquery-migrate-1.2.1.min.js" />
+    <Content Include="js\plugins\jquery\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="js\plugins\jquery\jquery.mousewheel.min.js" />
+    <Content Include="js\plugins\maskedinput\jquery.maskedinput-1.3.min.js" />
+    <Content Include="js\plugins\mcustomscrollbar\jquery.mCustomScrollbar.min.js" />
+    <Content Include="js\plugins\multiselect\jquery.multi-select.js" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\img\done.gif" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\img\error.gif" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="js\plugins\plupload\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="js\plugins\plupload\plupload.browserplus.js" />
+    <Content Include="js\plugins\plupload\plupload.flash.js" />
+    <Content Include="js\plugins\plupload\plupload.gears.js" />
+    <Content Include="js\plugins\plupload\plupload.html4.js" />
+    <Content Include="js\plugins\plupload\plupload.html5.js" />
+    <Content Include="js\plugins\plupload\plupload.js" />
+    <Content Include="js\plugins\plupload\plupload.silverlight.js" />
+    <Content Include="js\plugins\pnotify\jquery.pnotify.min.js" />
+    <Content Include="js\plugins\qtip\jquery.qtip-1.0.0-rc3.min.js" />
+    <Content Include="js\plugins\scrollup\jquery.scrollUp.min.js" />
+    <Content Include="js\plugins\select2\select2.min.js" />
+    <Content Include="js\plugins\sparklines\jquery.sparkline.min.js" />
+    <Content Include="js\plugins\stepywizard\jquery.stepy.js" />
+    <Content Include="js\plugins\tagsinput\jquery.tagsinput.min.js" />
+    <Content Include="js\plugins\uniform\uniform.js" />
+    <Content Include="js\plugins\validation\jquery.validationEngine.js" />
+    <Content Include="js\plugins\validation\languages\jquery.validationEngine-en.js" />
+    <Content Include="js\settings.js" />
+    <Content Include="js\UnicodeRomanized.js" />
+    <Content Include="js\UnicodeTraditional.js" />
+    <Content Include="Modules\MenuManagement\ListMenu.aspx" />
+    <Content Include="Modules\MenuManagement\menuAdd.aspx" />
+    <Content Include="Modules\MenuManagement\MenuPermission.aspx" />
+    <Content Include="Modules\UserManagement\UsersList.aspx" />
+    <Content Include="obj\Debug\MISUI.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MISUI.dll" />
+    <Content Include="obj\Debug\MISUI.pdb" />
+    <Content Include="Scripts\jquery-multiselect.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\ui\jquery-ui-light-theme.css" />
+    <Content Include="Scripts\ui\multiselect.css" />
+    <Content Include="test.aspx" />
+    <Content Include="XMLDataSource\Data\Trimester.xml" />
+    <None Include="amcharts\plugins\dataloader\examples\data\gantt.json" />
+    <None Include="amcharts\plugins\dataloader\examples\data\gauge.json" />
+    <None Include="amcharts\plugins\dataloader\examples\data\map.json" />
+    <None Include="amcharts\plugins\dataloader\examples\data\map_areas.json" />
+    <None Include="amcharts\plugins\dataloader\examples\data\MSFT.csv" />
+    <None Include="amcharts\plugins\dataloader\examples\data\MSFT_events.csv" />
+    <None Include="amcharts\plugins\dataloader\examples\data\pie.csv" />
+    <None Include="amcharts\plugins\dataloader\examples\data\pie.json" />
+    <None Include="amcharts\plugins\dataloader\examples\data\serial.csv" />
+    <None Include="amcharts\plugins\dataloader\examples\data\serial.json" />
+    <None Include="amcharts\plugins\dataloader\examples\data\serial2.json" />
+    <None Include="amcharts\plugins\dataloader\examples\data\TXN.csv" />
+    <None Include="amcharts\plugins\dataloader\readme.md" />
+    <None Include="amcharts\plugins\export\libs\pdfmake\pdfmake.min.js.map" />
+    <None Include="amcharts\plugins\export\libs\xlsx\LICENSE" />
+    <None Include="amcharts\plugins\export\libs\xlsx\xlsx.min.map" />
+    <None Include="amcharts\plugins\export\LICENSE" />
+    <None Include="amcharts\plugins\export\README.md" />
+    <None Include="amcharts\plugins\responsive\readme.md" />
+    <None Include="amcharts\plugins\responsive\responsive.min.js.map" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="Services\Report\ReportServices.asmx" />
+    <Content Include="src\intro.js" />
+    <Content Include="src\jquery-1.4.1.js" />
+    <Content Include="src\jquery-ui-1.8.1.custom.min.js" />
+    <Content Include="src\jstree.checkbox.js" />
+    <Content Include="src\jstree.contextmenu.js" />
+    <Content Include="src\jstree.dnd.js" />
+    <Content Include="src\jstree.js" />
+    <Content Include="src\jstree.massload.js" />
+    <Content Include="src\jstree.search.js" />
+    <Content Include="src\jstree.sort.js" />
+    <Content Include="src\jstree.state.js" />
+    <Content Include="src\jstree.types.js" />
+    <Content Include="src\jstree.unique.js" />
+    <Content Include="src\jstree.wholerow.js" />
+    <Content Include="src\misc.js" />
+    <Content Include="src\outro.js" />
+    <Content Include="src\sample.js" />
+    <Content Include="src\themes\default-dark\32px.png" />
+    <Content Include="src\themes\default-dark\40px.png" />
+    <Content Include="src\themes\default-dark\style.css" />
+    <Content Include="src\themes\default-dark\throbber.gif" />
+    <Content Include="src\themes\default\32px.png" />
+    <Content Include="src\themes\default\40px.png" />
+    <Content Include="src\themes\default\style.css" />
+    <Content Include="src\themes\default\throbber.gif" />
+    <Content Include="src\vakata-jstree.js" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\jquery-ui-light-theme.css" />
+    <Content Include="Styles\multiselect.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Modules\OfficeManagement\OfficeList.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <None Include="assets\css\less\ace-features.less" />
+    <None Include="assets\css\less\ace-nav.less" />
+    <None Include="assets\css\less\ace-responsive.less" />
+    <None Include="assets\css\less\ace-rtl.less" />
+    <None Include="assets\css\less\ace.less" />
+    <None Include="assets\css\less\basic.less" />
+    <None Include="assets\css\less\bootstrap\alerts.less" />
+    <None Include="assets\css\less\bootstrap\badges.less" />
+    <None Include="assets\css\less\bootstrap\bootstrap.less" />
+    <None Include="assets\css\less\bootstrap\breadcrumbs.less" />
+    <None Include="assets\css\less\bootstrap\button-groups.less" />
+    <None Include="assets\css\less\bootstrap\buttons.less" />
+    <None Include="assets\css\less\bootstrap\carousel.less" />
+    <None Include="assets\css\less\bootstrap\close.less" />
+    <None Include="assets\css\less\bootstrap\code.less" />
+    <None Include="assets\css\less\bootstrap\component-animations.less" />
+    <None Include="assets\css\less\bootstrap\dropdowns.less" />
+    <None Include="assets\css\less\bootstrap\forms.less" />
+    <None Include="assets\css\less\bootstrap\glyphicons.less" />
+    <None Include="assets\css\less\bootstrap\grid.less" />
+    <None Include="assets\css\less\bootstrap\input-groups.less" />
+    <None Include="assets\css\less\bootstrap\jumbotron.less" />
+    <None Include="assets\css\less\bootstrap\labels.less" />
+    <None Include="assets\css\less\bootstrap\list-group.less" />
+    <None Include="assets\css\less\bootstrap\media.less" />
+    <None Include="assets\css\less\bootstrap\mixins.less" />
+    <None Include="assets\css\less\bootstrap\mixins\alerts.less" />
+    <None Include="assets\css\less\bootstrap\mixins\background-variant.less" />
+    <None Include="assets\css\less\bootstrap\mixins\border-radius.less" />
+    <None Include="assets\css\less\bootstrap\mixins\buttons.less" />
+    <None Include="assets\css\less\bootstrap\mixins\center-block.less" />
+    <None Include="assets\css\less\bootstrap\mixins\clearfix.less" />
+    <None Include="assets\css\less\bootstrap\mixins\forms.less" />
+    <None Include="assets\css\less\bootstrap\mixins\gradients.less" />
+    <None Include="assets\css\less\bootstrap\mixins\grid-framework.less" />
+    <None Include="assets\css\less\bootstrap\mixins\grid.less" />
+    <None Include="assets\css\less\bootstrap\mixins\hide-text.less" />
+    <None Include="assets\css\less\bootstrap\mixins\image.less" />
+    <None Include="assets\css\less\bootstrap\mixins\labels.less" />
+    <None Include="assets\css\less\bootstrap\mixins\list-group.less" />
+    <None Include="assets\css\less\bootstrap\mixins\nav-divider.less" />
+    <None Include="assets\css\less\bootstrap\mixins\nav-vertical-align.less" />
+    <None Include="assets\css\less\bootstrap\mixins\opacity.less" />
+    <None Include="assets\css\less\bootstrap\mixins\pagination.less" />
+    <None Include="assets\css\less\bootstrap\mixins\panels.less" />
+    <None Include="assets\css\less\bootstrap\mixins\progress-bar.less" />
+    <None Include="assets\css\less\bootstrap\mixins\reset-filter.less" />
+    <None Include="assets\css\less\bootstrap\mixins\resize.less" />
+    <None Include="assets\css\less\bootstrap\mixins\responsive-visibility.less" />
+    <None Include="assets\css\less\bootstrap\mixins\size.less" />
+    <None Include="assets\css\less\bootstrap\mixins\tab-focus.less" />
+    <None Include="assets\css\less\bootstrap\mixins\table-row.less" />
+    <None Include="assets\css\less\bootstrap\mixins\text-emphasis.less" />
+    <None Include="assets\css\less\bootstrap\mixins\text-overflow.less" />
+    <None Include="assets\css\less\bootstrap\mixins\vendor-prefixes.less" />
+    <None Include="assets\css\less\bootstrap\modals.less" />
+    <None Include="assets\css\less\bootstrap\navbar.less" />
+    <None Include="assets\css\less\bootstrap\navs.less" />
+    <None Include="assets\css\less\bootstrap\normalize.less" />
+    <None Include="assets\css\less\bootstrap\pager.less" />
+    <None Include="assets\css\less\bootstrap\pagination.less" />
+    <None Include="assets\css\less\bootstrap\panels.less" />
+    <None Include="assets\css\less\bootstrap\popovers.less" />
+    <None Include="assets\css\less\bootstrap\print.less" />
+    <None Include="assets\css\less\bootstrap\progress-bars.less" />
+    <None Include="assets\css\less\bootstrap\responsive-embed.less" />
+    <None Include="assets\css\less\bootstrap\responsive-utilities.less" />
+    <None Include="assets\css\less\bootstrap\scaffolding.less" />
+    <None Include="assets\css\less\bootstrap\tables.less" />
+    <None Include="assets\css\less\bootstrap\theme.less" />
+    <None Include="assets\css\less\bootstrap\thumbnails.less" />
+    <None Include="assets\css\less\bootstrap\tooltip.less" />
+    <None Include="assets\css\less\bootstrap\type.less" />
+    <None Include="assets\css\less\bootstrap\utilities.less" />
+    <None Include="assets\css\less\bootstrap\variables.less" />
+    <None Include="assets\css\less\bootstrap\wells.less" />
+    <None Include="assets\css\less\breadcrumbs.less" />
+    <None Include="assets\css\less\bs3-reset.less" />
+    <None Include="assets\css\less\buttons.less" />
+    <None Include="assets\css\less\dropdown.less" />
+    <None Include="assets\css\less\dropdown\colorpicker.less" />
+    <None Include="assets\css\less\dropdown\navbar-dropdown.less" />
+    <None Include="assets\css\less\dropdown\navbar-tabbed-dropdown.less" />
+    <None Include="assets\css\less\ext\bootstrap-tag.less" />
+    <None Include="assets\css\less\fonts-rel.less" />
+    <None Include="assets\css\less\fonts.less" />
+    <None Include="assets\css\less\footer.less" />
+    <None Include="assets\css\less\form.less" />
+    <None Include="assets\css\less\form\checkbox.less" />
+    <None Include="assets\css\less\form\file.less" />
+    <None Include="assets\css\less\gallery.less" />
+    <None Include="assets\css\less\general.less" />
+    <None Include="assets\css\less\icon-animated.less" />
+    <None Include="assets\css\less\infobox.less" />
+    <None Include="assets\css\less\items.less" />
+    <None Include="assets\css\less\label-badge.less" />
+    <None Include="assets\css\less\mixins.less" />
+    <None Include="assets\css\less\modal.less" />
+    <None Include="assets\css\less\navbar\collapsible.less" />
+    <None Include="assets\css\less\navbar\navbar-menu-form.less" />
+    <None Include="assets\css\less\navbar\toggle-button.less" />
+    <None Include="assets\css\less\navbar\user-buttons-move-down.less" />
+    <None Include="assets\css\less\navbar\user-buttons.less" />
+    <None Include="assets\css\less\navbar\user-dropdown-position.less" />
+    <None Include="assets\css\less\navbar\user-menu.less" />
+    <None Include="assets\css\less\onpage-help.less" />
+    <None Include="assets\css\less\other.less" />
+    <None Include="assets\css\less\page.error.less" />
+    <None Include="assets\css\less\page.inbox.less" />
+    <None Include="assets\css\less\page.invoice.less" />
+    <None Include="assets\css\less\page.login.less" />
+    <None Include="assets\css\less\page.pricing.less" />
+    <None Include="assets\css\less\page.profile.less" />
+    <None Include="assets\css\less\page.timeline.less" />
+    <None Include="assets\css\less\print.less" />
+    <None Include="assets\css\less\progressbar.less" />
+    <None Include="assets\css\less\scroll.less" />
+    <None Include="assets\css\less\searchbox.less" />
+    <None Include="assets\css\less\sidebar.less" />
+    <None Include="assets\css\less\sidebar\active.less" />
+    <None Include="assets\css\less\sidebar\compact.less" />
+    <None Include="assets\css\less\sidebar\ff_fix.less" />
+    <None Include="assets\css\less\sidebar\highlight.less" />
+    <None Include="assets\css\less\sidebar\horizontal.less" />
+    <None Include="assets\css\less\sidebar\hover.less" />
+    <None Include="assets\css\less\sidebar\min.less" />
+    <None Include="assets\css\less\sidebar\multiple.less" />
+    <None Include="assets\css\less\sidebar\old-toggle-button.less" />
+    <None Include="assets\css\less\sidebar\responsive-1.less" />
+    <None Include="assets\css\less\sidebar\responsive-2.less" />
+    <None Include="assets\css\less\sidebar\responsive-3.less" />
+    <None Include="assets\css\less\sidebar\shortcuts-toggle.less" />
+    <None Include="assets\css\less\sidebar\sidebar-fixed.less" />
+    <None Include="assets\css\less\sidebar\sub-arrow.less" />
+    <None Include="assets\css\less\skins\empty.less" />
+    <None Include="assets\css\less\skins\no-skin.less" />
+    <None Include="assets\css\less\skins\skin-1.less" />
+    <None Include="assets\css\less\skins\skin-2.less" />
+    <None Include="assets\css\less\skins\skin-3.less" />
+    <None Include="assets\css\less\skins\skins.less" />
+    <None Include="assets\css\less\tab-accordion.less" />
+    <None Include="assets\css\less\tables.less" />
+    <None Include="assets\css\less\thirdparty-calendar.less" />
+    <None Include="assets\css\less\thirdparty-chosen.less" />
+    <None Include="assets\css\less\thirdparty-colorbox.less" />
+    <None Include="assets\css\less\thirdparty-dataTables.less" />
+    <None Include="assets\css\less\thirdparty-date.less" />
+    <None Include="assets\css\less\thirdparty-dropzone.less" />
+    <None Include="assets\css\less\thirdparty-duallist-multiselect.less" />
+    <None Include="assets\css\less\thirdparty-editable.less" />
+    <None Include="assets\css\less\thirdparty-fuelux.less" />
+    <None Include="assets\css\less\thirdparty-gritter.less" />
+    <None Include="assets\css\less\thirdparty-jqgrid.less" />
+    <None Include="assets\css\less\thirdparty-jquery-ui.less" />
+    <None Include="assets\css\less\thirdparty-nestable.less" />
+    <None Include="assets\css\less\thirdparty-raty.less" />
+    <None Include="assets\css\less\thirdparty-select2.less" />
+    <None Include="assets\css\less\thirdparty-slider.less" />
+    <None Include="assets\css\less\thirdparty-typeahead.less" />
+    <None Include="assets\css\less\thirdparty-wysiwyg.less" />
+    <None Include="assets\css\less\tooltip-popover.less" />
+    <None Include="assets\css\less\utility.less" />
+    <None Include="assets\css\less\variables.less" />
+    <None Include="assets\css\less\widget.less" />
+    <None Include="assets\fonts\fontawesome-webfont.eot" />
+    <None Include="assets\fonts\fontawesome-webfont.svg" />
+    <None Include="assets\fonts\fontawesome-webfont.ttf" />
+    <None Include="assets\fonts\fontawesome-webfont.woff" />
+    <None Include="assets\fonts\FontAwesome.otf" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="assets\fonts\OpenSans-300.woff" />
+    <None Include="assets\fonts\OpenSans-400.woff" />
+    <None Include="assets\fonts\readme" />
+    <None Include="assets\js\ace\readme" />
+    <None Include="assets\js\ace\scripts.json" />
+    <None Include="font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <None Include="font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <None Include="font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <None Include="font-awesome-4.1.0\less\bordered-pulled.less" />
+    <None Include="font-awesome-4.1.0\less\core.less" />
+    <None Include="font-awesome-4.1.0\less\fixed-width.less" />
+    <None Include="font-awesome-4.1.0\less\font-awesome.less" />
+    <None Include="font-awesome-4.1.0\less\icons.less" />
+    <None Include="font-awesome-4.1.0\less\larger.less" />
+    <None Include="font-awesome-4.1.0\less\list.less" />
+    <None Include="font-awesome-4.1.0\less\mixins.less" />
+    <None Include="font-awesome-4.1.0\less\path.less" />
+    <None Include="font-awesome-4.1.0\less\rotated-flipped.less" />
+    <None Include="font-awesome-4.1.0\less\spinning.less" />
+    <None Include="font-awesome-4.1.0\less\stacked.less" />
+    <None Include="font-awesome-4.1.0\less\variables.less" />
+    <None Include="font-awesome-4.1.0\scss\font-awesome.scss" />
+    <None Include="font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <None Include="font-awesome-4.1.0\scss\_core.scss" />
+    <None Include="font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <None Include="font-awesome-4.1.0\scss\_icons.scss" />
+    <None Include="font-awesome-4.1.0\scss\_larger.scss" />
+    <None Include="font-awesome-4.1.0\scss\_list.scss" />
+    <None Include="font-awesome-4.1.0\scss\_mixins.scss" />
+    <None Include="font-awesome-4.1.0\scss\_path.scss" />
+    <None Include="font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <None Include="font-awesome-4.1.0\scss\_spinning.scss" />
+    <None Include="font-awesome-4.1.0\scss\_stacked.scss" />
+    <None Include="font-awesome-4.1.0\scss\_variables.scss" />
+    <None Include="Unicode\Unicode.xls" />
+    <None Include="UserManual\UserManual.pdf" />
+    <None Include="Web References\ServiceActivityMgmt\ActivityManagementService.wsdl" />
+    <None Include="Web References\ServiceActivityMgmt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceBarsikKaryekram\BarsikKaryekramService.wsdl" />
+    <None Include="Web References\ServiceBarsikKaryekram\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceBudgetDonar\BudgetDonarService.wsdl" />
+    <None Include="Web References\ServiceBudgetDonar\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceFrameworkMgmt\FrameworkManagementService.wsdl" />
+    <None Include="Web References\ServiceFrameworkMgmt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceLogin\LoginService.wsdl" />
+    <None Include="Web References\ServiceLogin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceMenu\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceMenu\ServiceMenuManagement.disco" />
+    <None Include="Web References\ServiceOfficeMgmt\OfficeManagementService.wsdl" />
+    <None Include="Web References\ServiceOfficeMgmt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceOutputTarget\OutputTargetService.wsdl" />
+    <None Include="Web References\ServiceOutputTarget\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceProject\ProjectService.wsdl" />
+    <None Include="Web References\ServiceProject\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceRoleMgmt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceRoleMgmt\RoleManagement.wsdl" />
+    <None Include="Web References\ServiceSectorMgmt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceSectorMgmt\SectorService.wsdl" />
+    <None Include="Web References\ServiceUserMgmt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceUserMgmt\UserManagementService.disco" />
+    <None Include="Web References\ServiceBudgetDonar\BudgetDonarService.disco" />
+    <None Include="Web References\ServiceVdcMun\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceVdcMun\VdcMunService.disco" />
+    <Content Include="Unicode\unicode.txt" />
+    <None Include="Web References\ServiceRoleMgmt\RoleManagement.disco" />
+    <None Include="Web References\ServiceActivityMgmt\ActivityManagementService.disco" />
+    <None Include="Web References\ServiceSectorMgmt\SectorService.disco" />
+    <None Include="Web References\ServiceOutputTarget\OutputTargetService.disco" />
+    <None Include="Web References\ServiceLogin\LoginService.disco" />
+    <None Include="Web References\ServiceProject\ProjectService.disco" />
+    <None Include="Web References\ServiceOfficeMgmt\OfficeManagementService.disco" />
+    <None Include="Web References\ServiceBarsikKaryekram\BarsikKaryekramService.disco" />
+    <None Include="Web References\ServiceFrameworkMgmt\FrameworkManagementService.disco" />
+    <Content Include="WebService1.asmx" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MISUI.csprojResolveAssemblyReference.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceMenuOffice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceMenuOffice\Service1.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web References\ServiceMenuOffice\Service1.wsdl" />
+    <None Include="Web References\ServiceMenu\ServiceMenuManagement.wsdl" />
+    <None Include="Web References\ServiceUserMgmt\UserManagementService.wsdl" />
+    <None Include="Web References\ServiceVdcMun\VdcMunService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport\ProjectTrans\ProjectKaryekramPragati.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectKaryekramPragati.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport\ProjectTrans\NewProjectReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewProjectReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReport\ProjectTrans\ProjectNatijaRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectNatijaRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReport\ProjectTrans\ProjectSamastigatRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectSamastigatRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReport\ProjectTrans\ProjectStatusProblemsEffortsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectStatusProblemsEffortsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReport\ProjectTrans\UpdatedInfoRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdatedInfoRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\NewProjectViewer.aspx.cs">
+      <DependentUpon>NewProjectViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\NewProjectViewer.aspx.designer.cs">
+      <DependentUpon>NewProjectViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectNatijaViewer.aspx.cs">
+      <DependentUpon>ProjectNatijaViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectNatijaViewer.aspx.designer.cs">
+      <DependentUpon>ProjectNatijaViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport\ProjectTrans\ProjectPratifalRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectPratifalRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectPragatiViewer.aspx.cs">
+      <DependentUpon>ProjectPragatiViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectPragatiViewer.aspx.designer.cs">
+      <DependentUpon>ProjectPragatiViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectPratifalViewer.aspx.cs">
+      <DependentUpon>ProjectPratifalViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectPratifalViewer.aspx.designer.cs">
+      <DependentUpon>ProjectPratifalViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectSamastigatViewer.aspx.cs">
+      <DependentUpon>ProjectSamastigatViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectSamastigatViewer.aspx.designer.cs">
+      <DependentUpon>ProjectSamastigatViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectStatusProblemsEffortsViewer.aspx.cs">
+      <DependentUpon>ProjectStatusProblemsEffortsViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectStatusProblemsEffortsViewer.aspx.designer.cs">
+      <DependentUpon>ProjectStatusProblemsEffortsViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectUpdateViewer.aspx.cs">
+      <DependentUpon>ProjectUpdateViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrystalViewer\ProjectTrans\ProjectUpdateViewer.aspx.designer.cs">
+      <DependentUpon>ProjectUpdateViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropdownnCheck.aspx.cs">
+      <DependentUpon>dropdownnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropdownnCheck.aspx.designer.cs">
+      <DependentUpon>dropdownnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ActivityManagement\ActivityOutputMap.aspx.cs">
+      <DependentUpon>ActivityOutputMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ActivityManagement\ActivityOutputMap.aspx.designer.cs">
+      <DependentUpon>ActivityOutputMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ActivityManagement\AddActivityDetail.aspx.cs">
+      <DependentUpon>AddActivityDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ActivityManagement\AddActivityDetail.aspx.designer.cs">
+      <DependentUpon>AddActivityDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\BarsikKaryekram.aspx.cs">
+      <DependentUpon>BarsikKaryekram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\BarsikKaryekram.aspx.designer.cs">
+      <DependentUpon>BarsikKaryekram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectBarshikKaryakram.aspx.cs">
+      <DependentUpon>ListProjectBarshikKaryakram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectBarshikKaryakram.aspx.designer.cs">
+      <DependentUpon>ListProjectBarshikKaryakram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectBarshikPratifal.aspx.cs">
+      <DependentUpon>ListProjectBarshikPratifal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectBarshikPratifal.aspx.designer.cs">
+      <DependentUpon>ListProjectBarshikPratifal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectKaryakramPragati.aspx.cs">
+      <DependentUpon>ListProjectKaryakramPragati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectKaryakramPragati.aspx.designer.cs">
+      <DependentUpon>ListProjectKaryakramPragati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectKaryakramPratifal.aspx.cs">
+      <DependentUpon>ListProjectKaryakramPratifal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectKaryakramPratifal.aspx.designer.cs">
+      <DependentUpon>ListProjectKaryakramPratifal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectNatijaPragati.aspx.cs">
+      <DependentUpon>ListProjectNatijaPragati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectNatijaPragati.aspx.designer.cs">
+      <DependentUpon>ListProjectNatijaPragati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\KaryekramPragati.aspx.cs">
+      <DependentUpon>KaryekramPragati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\KaryekramPragati.aspx.designer.cs">
+      <DependentUpon>KaryekramPragati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectNatijaBarsik.aspx.cs">
+      <DependentUpon>ListProjectNatijaBarsik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ListProjectNatijaBarsik.aspx.designer.cs">
+      <DependentUpon>ListProjectNatijaBarsik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ProjectProblems.aspx.cs">
+      <DependentUpon>ProjectProblems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BarsikKaryekram\ProjectProblems.aspx.designer.cs">
+      <DependentUpon>ProjectProblems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Budget\AddBudgetDonar.aspx.cs">
+      <DependentUpon>AddBudgetDonar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Budget\AddBudgetDonar.aspx.designer.cs">
+      <DependentUpon>AddBudgetDonar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Budget\AddBudgetHead.aspx.cs">
+      <DependentUpon>AddBudgetHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Budget\AddBudgetHead.aspx.designer.cs">
+      <DependentUpon>AddBudgetHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Budget\BudgetDonarsList.aspx.cs">
+      <DependentUpon>BudgetDonarsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Budget\BudgetDonarsList.aspx.designer.cs">
+      <DependentUpon>BudgetDonarsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Budget\BudgetToOrganizationMap.aspx.cs">
+      <DependentUpon>BudgetToOrganizationMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Budget\BudgetToOrganizationMap.aspx.designer.cs">
+      <DependentUpon>BudgetToOrganizationMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Budget\BudgHeadList1.aspx.cs">
+      <DependentUpon>BudgHeadList1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Budget\BudgHeadList1.aspx.designer.cs">
+      <DependentUpon>BudgHeadList1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\AddMinistry.aspx.cs">
+      <DependentUpon>AddMinistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\AddMinistry.aspx.designer.cs">
+      <DependentUpon>AddMinistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\AddMunVdc.aspx.cs">
+      <DependentUpon>AddMunVdc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\AddMunVdc.aspx.designer.cs">
+      <DependentUpon>AddMunVdc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\MinistryList.aspx.cs">
+      <DependentUpon>MinistryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\MinistryList.aspx.designer.cs">
+      <DependentUpon>MinistryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\VdcMunList.aspx.cs">
+      <DependentUpon>VdcMunList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\DirectoryManagement\VdcMunList.aspx.designer.cs">
+      <DependentUpon>VdcMunList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FrameworkManagement\AddEditFramework.aspx.cs">
+      <DependentUpon>AddEditFramework.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\FrameworkManagement\AddEditFramework.aspx.designer.cs">
+      <DependentUpon>AddEditFramework.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FrameworkManagement\FrameworkList.aspx.cs">
+      <DependentUpon>FrameworkList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\FrameworkManagement\FrameworkList.aspx.designer.cs">
+      <DependentUpon>FrameworkList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OfficeManagement\AddOffice.aspx.cs">
+      <DependentUpon>AddOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OfficeManagement\AddOffice.aspx.designer.cs">
+      <DependentUpon>AddOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddOutput.aspx.cs">
+      <DependentUpon>AddOutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddOutput.aspx.designer.cs">
+      <DependentUpon>AddOutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddProjectOutput.aspx.cs">
+      <DependentUpon>AddProjectOutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddProjectOutput.aspx.designer.cs">
+      <DependentUpon>AddProjectOutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddProjectOutputProgress.aspx.cs">
+      <DependentUpon>AddProjectOutputProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddProjectOutputProgress.aspx.designer.cs">
+      <DependentUpon>AddProjectOutputProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddTarget.aspx.cs">
+      <DependentUpon>AddTarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\AddTarget.aspx.designer.cs">
+      <DependentUpon>AddTarget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\ListOutput.aspx.cs">
+      <DependentUpon>ListOutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\ListOutput.aspx.designer.cs">
+      <DependentUpon>ListOutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\ListTarget.aspx.cs">
+      <DependentUpon>ListTarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OutputTargetManagement\ListTarget.aspx.designer.cs">
+      <DependentUpon>ListTarget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProject.aspx.cs">
+      <DependentUpon>AddEditProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProject.aspx.designer.cs">
+      <DependentUpon>AddEditProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProjectAdministrativeDetails.aspx.cs">
+      <DependentUpon>AddEditProjectAdministrativeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProjectAdministrativeDetails.aspx.designer.cs">
+      <DependentUpon>AddEditProjectAdministrativeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProjectCostingTiming.aspx.cs">
+      <DependentUpon>AddEditProjectCostingTiming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProjectCostingTiming.aspx.designer.cs">
+      <DependentUpon>AddEditProjectCostingTiming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProjectOtherDetails.aspx.cs">
+      <DependentUpon>AddEditProjectOtherDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\AddEditProjectOtherDetails.aspx.designer.cs">
+      <DependentUpon>AddEditProjectOtherDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ListProjectTarget.aspx.cs">
+      <DependentUpon>ListProjectTarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ListProjectTarget.aspx.designer.cs">
+      <DependentUpon>ListProjectTarget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectBasicVerificationList.aspx.cs">
+      <DependentUpon>ProjectBasicVerificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectBasicVerificationList.aspx.designer.cs">
+      <DependentUpon>ProjectBasicVerificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectList.aspx.cs">
+      <DependentUpon>ProjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectList.aspx.designer.cs">
+      <DependentUpon>ProjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectPratifalVerificationList.aspx.cs">
+      <DependentUpon>ProjectPratifalVerificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectPratifalVerificationList.aspx.designer.cs">
+      <DependentUpon>ProjectPratifalVerificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectProgressList.aspx.cs">
+      <DependentUpon>ProjectProgressList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectProgressList.aspx.designer.cs">
+      <DependentUpon>ProjectProgressList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectSamastigatVerificationList.aspx.cs">
+      <DependentUpon>ProjectSamastigatVerificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ProjectSamastigatVerificationList.aspx.designer.cs">
+      <DependentUpon>ProjectSamastigatVerificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\PSPEVerificationList.aspx.cs">
+      <DependentUpon>PSPEVerificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\PSPEVerificationList.aspx.designer.cs">
+      <DependentUpon>PSPEVerificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ReportVerificationList.aspx.cs">
+      <DependentUpon>ReportVerificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\ReportVerificationList.aspx.designer.cs">
+      <DependentUpon>ReportVerificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\VerificationList.aspx.cs">
+      <DependentUpon>VerificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProjectManagement\VerificationList.aspx.designer.cs">
+      <DependentUpon>VerificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\AddEditKaryaniti.aspx.cs">
+      <DependentUpon>AddEditKaryaniti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\AddEditKaryaniti.aspx.designer.cs">
+      <DependentUpon>AddEditKaryaniti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\AddEditRananiti.aspx.cs">
+      <DependentUpon>AddEditRananiti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\AddEditRananiti.aspx.designer.cs">
+      <DependentUpon>AddEditRananiti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\ListKaryaniti.aspx.cs">
+      <DependentUpon>ListKaryaniti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\ListKaryaniti.aspx.designer.cs">
+      <DependentUpon>ListKaryaniti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\ListRananiti.aspx.cs">
+      <DependentUpon>ListRananiti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\RananitiKaryanitiManagement\ListRananiti.aspx.designer.cs">
+      <DependentUpon>ListRananiti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RoleManagement\AddRole.aspx.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\RoleManagement\AddRole.aspx.designer.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SectorManagement\AddEditSubSector.aspx.cs">
+      <DependentUpon>AddEditSubSector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\SectorManagement\AddEditSubSector.aspx.designer.cs">
+      <DependentUpon>AddEditSubSector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SectorManagement\ListSubSector.aspx.cs">
+      <DependentUpon>ListSubSector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\SectorManagement\ListSubSector.aspx.designer.cs">
+      <DependentUpon>ListSubSector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UserManagement\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\UserManagement\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Base.aspx.cs">
+      <DependentUpon>Base.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base.aspx.designer.cs">
+      <DependentUpon>Base.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCMenu.ascx.cs">
+      <DependentUpon>UCMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UCMenu.ascx.designer.cs">
+      <DependentUpon>UCMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OfficeManagement\OfficeList.aspx.cs">
+      <DependentUpon>OfficeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OfficeManagement\OfficeList.aspx.designer.cs">
+      <DependentUpon>OfficeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JSTreeModel.cs" />
+    <Compile Include="Modules\MenuManagement\ListMenu.aspx.cs">
+      <DependentUpon>ListMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MenuManagement\ListMenu.aspx.designer.cs">
+      <DependentUpon>ListMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MenuManagement\menuAdd.aspx.cs">
+      <DependentUpon>menuAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MenuManagement\menuAdd.aspx.designer.cs">
+      <DependentUpon>menuAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MenuManagement\MenuPermission.aspx.cs">
+      <DependentUpon>MenuPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MenuManagement\MenuPermission.aspx.designer.cs">
+      <DependentUpon>MenuPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UserManagement\UsersList.aspx.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\UserManagement\UsersList.aspx.designer.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceAuth.cs" />
+    <Compile Include="Services\Report\ReportFactory.cs" />
+    <Compile Include="Services\Report\ReportServices.asmx.cs">
+      <DependentUpon>ReportServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceActivityMgmt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceBarsikKaryekram\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceBudgetDonar\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceFrameworkMgmt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceLogin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceMenuOffice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceMenu\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceOfficeMgmt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceOutputTarget\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceProject\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceRoleMgmt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceSectorMgmt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceUserMgmt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceVdcMun\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="BarshikFiles\" />
+    <Folder Include="ChaumasikFiles\" />
+    <Folder Include="FeedBackFiles\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="ProjectFiles\" />
+    <Folder Include="UploadedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\themes\base.less" />
+    <None Include="src\themes\default-dark\style.less" />
+    <None Include="src\themes\default\style.less" />
+    <None Include="src\themes\main.less" />
+    <None Include="src\themes\mixins.less" />
+    <None Include="src\themes\responsive.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:7404/ActivityManagementService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceActivityMgmt\</RelPath>
+      <UpdateFromURL>http://localhost:7404/ActivityManagementService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_SeerviceActivityMgmt_ActivityManagementService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/BarsikKaryekramService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceBarsikKaryekram\</RelPath>
+      <UpdateFromURL>http://localhost:7404/BarsikKaryekramService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceBarsikKaryekram_BarsikKaryekramService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/BudgetDonarService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceBudgetDonar\</RelPath>
+      <UpdateFromURL>http://localhost:7404/BudgetDonarService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceBudgetDonar_BudgetDonarService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/FrameworkManagementService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceFrameworkMgmt\</RelPath>
+      <UpdateFromURL>http://localhost:7404/FrameworkManagementService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceFrameworkMgmt_FrameworkManagementService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/LoginService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceLogin\</RelPath>
+      <UpdateFromURL>http://localhost:7404/LoginService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceLogin_LoginService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/OfficeManagementService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceOfficeMgmt\</RelPath>
+      <UpdateFromURL>http://localhost:7404/OfficeManagementService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceOfficeMgmt_OfficeManagementService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/OutputTargetService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceOutputTarget\</RelPath>
+      <UpdateFromURL>http://localhost:7404/OutputTargetService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceOutputTarget_OutputTargetService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/ProjectService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceProject\</RelPath>
+      <UpdateFromURL>http://localhost:7404/ProjectService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceProject_ProjectService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/RoleManagement.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceRoleMgmt\</RelPath>
+      <UpdateFromURL>http://localhost:7404/RoleManagement.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceRoleMgmt_RoleManagement</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/SectorService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceSectorMgmt\</RelPath>
+      <UpdateFromURL>http://localhost:7404/SectorService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceSectorMgmt_SectorService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceMenuOffice\</RelPath>
+      <UpdateFromURL>http://localhost:7404/Service1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceMenuOffice_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/ServiceMenuManagement.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceMenu\</RelPath>
+      <UpdateFromURL>http://localhost:7404/ServiceMenuManagement.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceMenu_ServiceMenuManagement</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/UserManagementService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceUserMgmt\</RelPath>
+      <UpdateFromURL>http://localhost:7404/UserManagementService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceUserMgmt_UserManagementService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7404/VdcMunService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceVdcMun\</RelPath>
+      <UpdateFromURL>http://localhost:7404/VdcMunService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MISUI_ServiceVdcMun_VdcMunService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MISUICOMMON\MISUICOMMON.csproj">
+      <Project>{72374297-4B18-4EAE-AE26-010ADD34B655}</Project>
+      <Name>MISUICOMMON</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrystalReport\ProjectTrans\ProjectKaryekramPragati.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProjectKaryekramPragati.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\ProjectTrans\NewProjectReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NewProjectReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\ProjectTrans\ProjectNatijaRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProjectNatijaRpt.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\ProjectTrans\ProjectSamastigatRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProjectSamastigatRpt.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\ProjectTrans\ProjectStatusProblemsEffortsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProjectStatusProblemsEffortsReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\ProjectTrans\UpdatedInfoRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UpdatedInfoRpt.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\ProjectTrans\ProjectPratifalRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProjectPratifalRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>16050</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertUpdateProjectBudgDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectDetail" type="tns:ProjectBudgetDetailBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProjectBudgetDetailBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BudgBadfadId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BadfadId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstTRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondTRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdCRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstPRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondPRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdPRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhMagGarneF" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhMagGarneS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhMagGarneT" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhHalSammaMagF" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhHalSammaMagS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhHalSammaMagT" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhHalSammaPraptaF" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhHalSammaPraptaS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBhHalSammaPraptaT" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUpdateProjectBudgDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateProjectBudgDetailResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="PopulateBudgDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectBudgetDetail" type="tns:ProjectBudgetDetailBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBudgDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateBudgDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarsikThekaParamarsa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectBudgetDetail" type="tns:ProjectBudgetDetailBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarsikThekaParamarsaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateBarsikThekaParamarsaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateProjectBarsikThekaParamarsa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectBarsikThekaParamarsa" type="tns:ProjectBarsikThekaParamarsaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProjectBarsikThekaParamarsaBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BarsikThekaPId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaFTNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaFTRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFTSwadeshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFTBideshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFTSwadeshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFTBideshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaSTNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaSTRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaTTNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaTTRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSTSwadeshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSTSwadesiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSTBideshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSTBideshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTTSwadeshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTTSwadeshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTTBideshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTTBideshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaFPNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaFPRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFPSwadeshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFPBideshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFPSwadeshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PFPBideshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaSPNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaSPRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaTPNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThekaTPRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSPSwadeshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSPSwadesiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSPBideshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSPBideshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTPSwadeshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTPSwadeshiRakam" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTPBideshiNo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTPBideshiRakam" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BarshikFileName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChaumasikId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChaumasikFileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUpdateProjectBarsikThekaParamarsaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateProjectBarsikThekaParamarsaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateProjectBhautikBPragati">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectBhautikBPragati" type="tns:ProjectBhautikBPragatiBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProjectBhautikBPragatiBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PragatiBId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstBhautikP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondBhautikP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdBhautikP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstBitiyeP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondBitiyeP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdBitiyeP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="YesAbadhiSammaBhautik" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="YesAbadiSammaBitiye" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BitekoAbadhi" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="YesAbadhiSammaBhautikS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="YesAbadhiSammaBhautikT" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BitekoAbadhiS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BitekoAbadhiT" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="YesAbadhiSammaBitiyeS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="YesAbadhiSammaBitiyeT" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUpdateProjectBhautikBPragatiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateProjectBhautikBPragatiResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateProjectOutputTBarsik">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:ProjectOutputTBarsikBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProjectOutputTBarsikBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PTargetBId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PTargetFirstC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PTargetSecondC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PTargetThirdC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PTargetFirstP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PTargetSecondP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PTargetThirdP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTargetId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Isenable" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Islocked" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChaumasikId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lang" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectOutputId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUpdateProjectOutputTBarsikResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateProjectOutputTBarsikResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateProjectOutputProgress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:ProjectOutputTBarsikBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateProjectOutputProgressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateProjectOutputProgressResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateBarshikBharit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objBarsikBharitBo" type="tns:BarsikBharitBo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BarsikBharitBo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BarshikBharitId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BarshikBharitLakshya" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstBharitLakshya" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondBharitLakshya" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdBharitLakshya" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUpdateBarshikBharitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateBarshikBharitResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarshikBharit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objBarsikBharitBo" type="tns:BarsikBharitBo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarshikBharitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateBarshikBharitResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectTargetsBarsik">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:ProjectOutputTBarsikBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectTargetsBarsikResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateProjectTargetsBarsikResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectTargetsBarsikRpt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objOutputTarget" type="tns:ProjectOutputTBarsikBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectTargetsBarsikRptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateProjectTargetsBarsikRptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateBarshikFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ProjectBarsikThekaParamarsaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateBarshikFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateBarshikFileResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarshikFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ProjectBarsikThekaParamarsaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarshikFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateBarshikFileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateChaumasikFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ProjectBarsikThekaParamarsaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateChaumasikFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateChaumasikFileResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateChaumasikFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ProjectBarsikThekaParamarsaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateChaumasikFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateChaumasikFileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateProjectUpalabdhi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectUpalabdhi" type="tns:ProjectUpalabdhiBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProjectUpalabdhiBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UplabdhiId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstCDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondCDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThirdCDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUpdateProjectUpalabdhiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateProjectUpalabdhiResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateUpalabdhi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ProjectUpalabdhiBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateUpalabdhiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateUpalabdhiResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectProgress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ProjectOutputTBarsikBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectProgressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateProjectProgressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectProgressRpt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ProjectOutputTBarsikBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateProjectProgressRptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateProjectProgressRptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateBarshikAnya">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectBarshikAnyaBo" type="tns:ProjectBarshikAnyaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProjectBarshikAnyaBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BarshikAnyaID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalYearId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstRakamAnya" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondRakamAnya" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdRakamAnya" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemarksAnya" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstAnyaPragati" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecondAnyaPragati" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThirdAnyaPragati" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUpdateBarshikAnyaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertUpdateBarshikAnyaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarshikAnya">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objProjectBarshikAnyaBo" type="tns:ProjectBarshikAnyaBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateBarshikAnyaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateBarshikAnyaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertUpdateProjectBudgDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectBudgDetail" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBudgDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectBudgDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBudgDetailAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBudgDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateBudgDetail" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBudgDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateBudgDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBudgDetailAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarsikThekaParamarsaSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateBarsikThekaParamarsa" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarsikThekaParamarsaSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateBarsikThekaParamarsaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarsikThekaParamarsaAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBarsikThekaParamarsaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectBarsikThekaParamarsa" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBarsikThekaParamarsaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectBarsikThekaParamarsaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBarsikThekaParamarsaAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBhautikBPragatiSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectBhautikBPragati" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBhautikBPragatiSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectBhautikBPragatiResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectBhautikBPragatiAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectOutputTBarsikSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectOutputTBarsik" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectOutputTBarsikSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectOutputTBarsikResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectOutputTBarsikAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectOutputProgressSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectOutputProgress" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectOutputProgressSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectOutputProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectOutputProgressAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikBharitSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateBarshikBharit" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikBharitSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateBarshikBharitResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikBharitAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikBharitSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateBarshikBharit" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikBharitSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateBarshikBharitResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikBharitAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsBarsikSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateProjectTargetsBarsik" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsBarsikSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateProjectTargetsBarsikResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsBarsikAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsBarsikRptSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateProjectTargetsBarsikRpt" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsBarsikRptSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateProjectTargetsBarsikRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectTargetsBarsikRptAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikFileSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateBarshikFile" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikFileSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateBarshikFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikFileAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikFileSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateBarshikFile" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikFileSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateBarshikFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikFileAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateChaumasikFileSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateChaumasikFile" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateChaumasikFileSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateChaumasikFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateChaumasikFileAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateChaumasikFileSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateChaumasikFile" />
+  </wsdl:message>
+  <wsdl:message name="PopulateChaumasikFileSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateChaumasikFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateChaumasikFileAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectUpalabdhiSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectUpalabdhi" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectUpalabdhiSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateProjectUpalabdhiResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateProjectUpalabdhiAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateUpalabdhiSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateUpalabdhi" />
+  </wsdl:message>
+  <wsdl:message name="PopulateUpalabdhiSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateUpalabdhiResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateUpalabdhiAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectProgressSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateProjectProgress" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectProgressSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateProjectProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectProgressAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectProgressRptSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateProjectProgressRpt" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectProgressRptSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateProjectProgressRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateProjectProgressRptAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikAnyaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateBarshikAnya" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikAnyaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateBarshikAnyaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateBarshikAnyaAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikAnyaSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateBarshikAnya" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikAnyaSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateBarshikAnyaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateBarshikAnyaAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:portType name="BarsikKaryekramServiceSoap">
+    <wsdl:operation name="InsertUpdateProjectBudgDetail">
+      <wsdl:input message="tns:InsertUpdateProjectBudgDetailSoapIn" />
+      <wsdl:output message="tns:InsertUpdateProjectBudgDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBudgDetail">
+      <wsdl:input message="tns:PopulateBudgDetailSoapIn" />
+      <wsdl:output message="tns:PopulateBudgDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarsikThekaParamarsa">
+      <wsdl:input message="tns:PopulateBarsikThekaParamarsaSoapIn" />
+      <wsdl:output message="tns:PopulateBarsikThekaParamarsaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectBarsikThekaParamarsa">
+      <wsdl:input message="tns:InsertUpdateProjectBarsikThekaParamarsaSoapIn" />
+      <wsdl:output message="tns:InsertUpdateProjectBarsikThekaParamarsaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectBhautikBPragati">
+      <wsdl:input message="tns:InsertUpdateProjectBhautikBPragatiSoapIn" />
+      <wsdl:output message="tns:InsertUpdateProjectBhautikBPragatiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectOutputTBarsik">
+      <wsdl:input message="tns:InsertUpdateProjectOutputTBarsikSoapIn" />
+      <wsdl:output message="tns:InsertUpdateProjectOutputTBarsikSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectOutputProgress">
+      <wsdl:input message="tns:InsertUpdateProjectOutputProgressSoapIn" />
+      <wsdl:output message="tns:InsertUpdateProjectOutputProgressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikBharit">
+      <wsdl:input message="tns:InsertUpdateBarshikBharitSoapIn" />
+      <wsdl:output message="tns:InsertUpdateBarshikBharitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikBharit">
+      <wsdl:input message="tns:PopulateBarshikBharitSoapIn" />
+      <wsdl:output message="tns:PopulateBarshikBharitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargetsBarsik">
+      <wsdl:input message="tns:PopulateProjectTargetsBarsikSoapIn" />
+      <wsdl:output message="tns:PopulateProjectTargetsBarsikSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargetsBarsikRpt">
+      <wsdl:input message="tns:PopulateProjectTargetsBarsikRptSoapIn" />
+      <wsdl:output message="tns:PopulateProjectTargetsBarsikRptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikFile">
+      <wsdl:input message="tns:InsertUpdateBarshikFileSoapIn" />
+      <wsdl:output message="tns:InsertUpdateBarshikFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikFile">
+      <wsdl:input message="tns:PopulateBarshikFileSoapIn" />
+      <wsdl:output message="tns:PopulateBarshikFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateChaumasikFile">
+      <wsdl:input message="tns:InsertUpdateChaumasikFileSoapIn" />
+      <wsdl:output message="tns:InsertUpdateChaumasikFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateChaumasikFile">
+      <wsdl:input message="tns:PopulateChaumasikFileSoapIn" />
+      <wsdl:output message="tns:PopulateChaumasikFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectUpalabdhi">
+      <wsdl:input message="tns:InsertUpdateProjectUpalabdhiSoapIn" />
+      <wsdl:output message="tns:InsertUpdateProjectUpalabdhiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateUpalabdhi">
+      <wsdl:input message="tns:PopulateUpalabdhiSoapIn" />
+      <wsdl:output message="tns:PopulateUpalabdhiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectProgress">
+      <wsdl:input message="tns:PopulateProjectProgressSoapIn" />
+      <wsdl:output message="tns:PopulateProjectProgressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectProgressRpt">
+      <wsdl:input message="tns:PopulateProjectProgressRptSoapIn" />
+      <wsdl:output message="tns:PopulateProjectProgressRptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikAnya">
+      <wsdl:input message="tns:InsertUpdateBarshikAnyaSoapIn" />
+      <wsdl:output message="tns:InsertUpdateBarshikAnyaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikAnya">
+      <wsdl:input message="tns:PopulateBarshikAnyaSoapIn" />
+      <wsdl:output message="tns:PopulateBarshikAnyaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BarsikKaryekramServiceSoap" type="tns:BarsikKaryekramServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertUpdateProjectBudgDetail">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateProjectBudgDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateProjectBudgDetailAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBudgDetail">
+      <soap:operation soapAction="http://tempuri.org/PopulateBudgDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateBudgDetailAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarsikThekaParamarsa">
+      <soap:operation soapAction="http://tempuri.org/PopulateBarsikThekaParamarsa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateBarsikThekaParamarsaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectBarsikThekaParamarsa">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateProjectBarsikThekaParamarsa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateProjectBarsikThekaParamarsaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectBhautikBPragati">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateProjectBhautikBPragati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateProjectBhautikBPragatiAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectOutputTBarsik">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateProjectOutputTBarsik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateProjectOutputTBarsikAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectOutputProgress">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateProjectOutputProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateProjectOutputProgressAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikBharit">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateBarshikBharit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateBarshikBharitAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikBharit">
+      <soap:operation soapAction="http://tempuri.org/PopulateBarshikBharit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateBarshikBharitAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargetsBarsik">
+      <soap:operation soapAction="http://tempuri.org/PopulateProjectTargetsBarsik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateProjectTargetsBarsikAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargetsBarsikRpt">
+      <soap:operation soapAction="http://tempuri.org/PopulateProjectTargetsBarsikRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateProjectTargetsBarsikRptAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikFile">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateBarshikFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateBarshikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikFile">
+      <soap:operation soapAction="http://tempuri.org/PopulateBarshikFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateBarshikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateChaumasikFile">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateChaumasikFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateChaumasikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateChaumasikFile">
+      <soap:operation soapAction="http://tempuri.org/PopulateChaumasikFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateChaumasikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectUpalabdhi">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateProjectUpalabdhi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateProjectUpalabdhiAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateUpalabdhi">
+      <soap:operation soapAction="http://tempuri.org/PopulateUpalabdhi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateUpalabdhiAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectProgress">
+      <soap:operation soapAction="http://tempuri.org/PopulateProjectProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateProjectProgressAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectProgressRpt">
+      <soap:operation soapAction="http://tempuri.org/PopulateProjectProgressRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateProjectProgressRptAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikAnya">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateBarshikAnya" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateBarshikAnyaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikAnya">
+      <soap:operation soapAction="http://tempuri.org/PopulateBarshikAnya" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateBarshikAnyaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BarsikKaryekramServiceSoap12" type="tns:BarsikKaryekramServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertUpdateProjectBudgDetail">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateProjectBudgDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateProjectBudgDetailAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBudgDetail">
+      <soap12:operation soapAction="http://tempuri.org/PopulateBudgDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateBudgDetailAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarsikThekaParamarsa">
+      <soap12:operation soapAction="http://tempuri.org/PopulateBarsikThekaParamarsa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateBarsikThekaParamarsaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectBarsikThekaParamarsa">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateProjectBarsikThekaParamarsa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateProjectBarsikThekaParamarsaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectBhautikBPragati">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateProjectBhautikBPragati" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateProjectBhautikBPragatiAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectOutputTBarsik">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateProjectOutputTBarsik" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateProjectOutputTBarsikAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectOutputProgress">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateProjectOutputProgress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateProjectOutputProgressAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikBharit">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateBarshikBharit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateBarshikBharitAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikBharit">
+      <soap12:operation soapAction="http://tempuri.org/PopulateBarshikBharit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateBarshikBharitAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargetsBarsik">
+      <soap12:operation soapAction="http://tempuri.org/PopulateProjectTargetsBarsik" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateProjectTargetsBarsikAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectTargetsBarsikRpt">
+      <soap12:operation soapAction="http://tempuri.org/PopulateProjectTargetsBarsikRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateProjectTargetsBarsikRptAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikFile">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateBarshikFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateBarshikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikFile">
+      <soap12:operation soapAction="http://tempuri.org/PopulateBarshikFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateBarshikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateChaumasikFile">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateChaumasikFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateChaumasikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateChaumasikFile">
+      <soap12:operation soapAction="http://tempuri.org/PopulateChaumasikFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateChaumasikFileAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateProjectUpalabdhi">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateProjectUpalabdhi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateProjectUpalabdhiAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateUpalabdhi">
+      <soap12:operation soapAction="http://tempuri.org/PopulateUpalabdhi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateUpalabdhiAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectProgress">
+      <soap12:operation soapAction="http://tempuri.org/PopulateProjectProgress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateProjectProgressAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateProjectProgressRpt">
+      <soap12:operation soapAction="http://tempuri.org/PopulateProjectProgressRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateProjectProgressRptAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateBarshikAnya">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateBarshikAnya" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateBarshikAnyaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateBarshikAnya">
+      <soap12:operation soapAction="http://tempuri.org/PopulateBarshikAnya" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateBarshikAnyaAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BarsikKaryekramService">
+    <wsdl:port name="BarsikKaryekramServiceSoap" binding="tns:BarsikKaryekramServiceSoap">
+      <soap:address location="http://localhost:7404/BarsikKaryekramService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BarsikKaryekramServiceSoap12" binding="tns:BarsikKaryekramServiceSoap12">
+      <soap12:address location="http://localhost:7404/BarsikKaryekramService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

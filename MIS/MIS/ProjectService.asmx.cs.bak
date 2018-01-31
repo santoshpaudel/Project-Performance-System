@@ -1,0 +1,263 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Services;
+using System.Web.Services.Protocols;
+using MISCOMMON.Entity;
+using MISDAL.Project;
+
+namespace MIS
+{
+    /// <summary>
+    /// Summary description for ProjectService
+    /// </summary>
+    [WebService(Namespace = "http://tempuri.org/")]
+    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+    [System.ComponentModel.ToolboxItem(false)]
+    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
+        // [System.Web.Script.Services.ScriptService]
+    public class ProjectService : BaseService
+    {
+        private ProjectDAL objProject
+        {
+            get { return new ProjectDAL(); }
+        }
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int AddEditProject(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+
+            return objProject.AddEditProject(objProjectDetail);
+        }
+
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateRananiti(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateRananiti(objProjectDetail);
+
+        }
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateKaryaniti(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateKaryaniti(objProjectDetail);
+
+        }
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateSahashrabdiBikashLakshya(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateSahashrabdiBikashLakshya(objProjectDetail);
+
+        }
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateSahashrabdiBikashGantabya(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateSahashrabdiBikashGantabya(objProjectDetail);
+
+        }
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateSahashrabdiBikashSuchak(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateSahashrabdiBikashSuchak(objProjectDetail);
+
+        }
+       
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateBhuktaniPrakar(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateBhuktaniPrakar(objProjectDetail);
+
+        }
+       
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateParamarsaBibaran(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateParamarsaBibaran(objProjectDetail);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateAayojanaBadfad(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateAayojanaBadfad(objProjectDetail);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateBarshikBadfad(ComProjectBO objProjectDetail)
+        {
+            Authentication();
+            return objProject.PopulateBarshikBadfad(objProjectDetail);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateRananitiBySubSectorId(ComSubSector objComSubSector)
+        {
+            Authentication();
+
+            return objProject.PopulateRananitiBySubSectorId(objComSubSector);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateKaryanitiByRananitiId(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateKaryanitiByRananitiId(objComProjectBO);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int CountMaxRows(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.CountMaxRows(objComProjectBO);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateProjectByBudgetHead(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateProjectByBudgetHead(objComProjectBO);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int ClearShrotgatBadfad(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.ClearShrotgatBadfad(objComProjectBO);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int SaveShrotgatBudgetBadfad(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.SaveShrotgatBudgetBadfad(objComProjectBO);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int SaveProjectCostingTiming(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.SaveProjectCostingTiming(objComProjectBO);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateProjectCostingTiming(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateProjectCostingTiming(objComProjectBO);
+
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateAdministrativeDetails(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateAdministrativeDetails(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateBhautikSamagri(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateBhautikSamagri(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateShrotgatAayojanaBadfad(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateShrotgatAayojanaBadfad(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int SaveAdminDetails(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.SaveAdminDetails(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int ClearBhautikSamagri(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.ClearBhautikSamagri(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int SaveBhautikSamagri(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.SaveBhautikSamagri(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateOtherDetails(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateOtherDetails(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateParamarshaBibaran(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateParamarshaBibaran(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int SaveOtherDetails(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.SaveOtherDetails(objComProjectBO);
+        }
+
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int ClearParamarshaDetails(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.ClearParamarshaDetails(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int SaveParamarshaBibaran(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.SaveParamarshaBibaran(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateProjectList(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateProjectList(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateProjectDetails(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateProjectDetails(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public DataTable PopulateProjectSansodhan(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.PopulateProjectSansodhan(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int ClearProjectSansodhan(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.ClearProjectSansodhan(objComProjectBO);
+        }
+        [WebMethod, SoapHeader("spAuthenticationHeader")]
+        public int SaveProjectSansodhan(ComProjectBO objComProjectBO)
+        {
+            Authentication();
+            return objProject.SaveProjectSansodhan(objComProjectBO);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS", "MIS\MIS.csproj", "{43F75198-4FAA-4EF9-8D44-E14D16418FD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISDAL", "MISDAL\MISDAL.csproj", "{51E6CE21-5DD8-4543-B662-219F641A2A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISCOMMON", "MISCOMMON\MISCOMMON.csproj", "{68D19007-3272-4DC1-9644-33966EF2CD09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43F75198-4FAA-4EF9-8D44-E14D16418FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F75198-4FAA-4EF9-8D44-E14D16418FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F75198-4FAA-4EF9-8D44-E14D16418FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F75198-4FAA-4EF9-8D44-E14D16418FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E6CE21-5DD8-4543-B662-219F641A2A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E6CE21-5DD8-4543-B662-219F641A2A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E6CE21-5DD8-4543-B662-219F641A2A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E6CE21-5DD8-4543-B662-219F641A2A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D19007-3272-4DC1-9644-33966EF2CD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D19007-3272-4DC1-9644-33966EF2CD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D19007-3272-4DC1-9644-33966EF2CD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D19007-3272-4DC1-9644-33966EF2CD09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

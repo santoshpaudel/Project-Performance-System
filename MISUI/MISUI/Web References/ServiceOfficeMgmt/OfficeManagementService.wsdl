@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="DeleteOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOfficeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="FetchOfficeHierarchy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchOfficeHierarchyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchOfficeHierarchyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComOffice" type="tns:ComOffice" />
+            <s:element minOccurs="1" maxOccurs="1" name="entryMode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="officeId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ComOffice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="officeEnglishName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="officeNepaliName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="officeParentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="officeTypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ministryId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="vdcMunId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="districtId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="isEnable" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddOfficeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOfficeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateOfficeDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateOfficeDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateOfficeDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="populateOfficeType">
+        <s:complexType />
+      </s:element>
+      <s:element name="populateOfficeTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="populateOfficeTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchAllOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchAllOfficeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchAllOfficeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchOfficeResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DeleteOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteOffice" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOfficeAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="FetchOfficeHierarchySoapIn">
+    <wsdl:part name="parameters" element="tns:FetchOfficeHierarchy" />
+  </wsdl:message>
+  <wsdl:message name="FetchOfficeHierarchySoapOut">
+    <wsdl:part name="parameters" element="tns:FetchOfficeHierarchyResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchOfficeHierarchyAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="AddOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOffice" />
+  </wsdl:message>
+  <wsdl:message name="AddOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOfficeAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOfficeDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateOfficeDetails" />
+  </wsdl:message>
+  <wsdl:message name="PopulateOfficeDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateOfficeDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="populateOfficeTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:populateOfficeType" />
+  </wsdl:message>
+  <wsdl:message name="populateOfficeTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:populateOfficeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchAllOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchAllOffice" />
+  </wsdl:message>
+  <wsdl:message name="FetchAllOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchAllOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchAllOfficeAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="FetchOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchOffice" />
+  </wsdl:message>
+  <wsdl:message name="FetchOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchOfficeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OfficeManagementServiceSoap">
+    <wsdl:operation name="DeleteOffice">
+      <wsdl:input message="tns:DeleteOfficeSoapIn" />
+      <wsdl:output message="tns:DeleteOfficeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchOfficeHierarchy">
+      <wsdl:input message="tns:FetchOfficeHierarchySoapIn" />
+      <wsdl:output message="tns:FetchOfficeHierarchySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOffice">
+      <wsdl:input message="tns:AddOfficeSoapIn" />
+      <wsdl:output message="tns:AddOfficeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOfficeDetails">
+      <wsdl:input message="tns:PopulateOfficeDetailsSoapIn" />
+      <wsdl:output message="tns:PopulateOfficeDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="populateOfficeType">
+      <wsdl:input message="tns:populateOfficeTypeSoapIn" />
+      <wsdl:output message="tns:populateOfficeTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllOffice">
+      <wsdl:input message="tns:FetchAllOfficeSoapIn" />
+      <wsdl:output message="tns:FetchAllOfficeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchOffice">
+      <wsdl:input message="tns:FetchOfficeSoapIn" />
+      <wsdl:output message="tns:FetchOfficeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OfficeManagementServiceSoap" type="tns:OfficeManagementServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteOffice">
+      <soap:operation soapAction="http://tempuri.org/DeleteOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchOfficeHierarchy">
+      <soap:operation soapAction="http://tempuri.org/FetchOfficeHierarchy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FetchOfficeHierarchyAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOffice">
+      <soap:operation soapAction="http://tempuri.org/AddOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOfficeDetails">
+      <soap:operation soapAction="http://tempuri.org/PopulateOfficeDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateOfficeType">
+      <soap:operation soapAction="http://tempuri.org/populateOfficeType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllOffice">
+      <soap:operation soapAction="http://tempuri.org/FetchAllOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FetchAllOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchOffice">
+      <soap:operation soapAction="http://tempuri.org/FetchOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OfficeManagementServiceSoap12" type="tns:OfficeManagementServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteOffice">
+      <soap12:operation soapAction="http://tempuri.org/DeleteOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchOfficeHierarchy">
+      <soap12:operation soapAction="http://tempuri.org/FetchOfficeHierarchy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FetchOfficeHierarchyAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOffice">
+      <soap12:operation soapAction="http://tempuri.org/AddOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOfficeDetails">
+      <soap12:operation soapAction="http://tempuri.org/PopulateOfficeDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populateOfficeType">
+      <soap12:operation soapAction="http://tempuri.org/populateOfficeType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllOffice">
+      <soap12:operation soapAction="http://tempuri.org/FetchAllOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FetchAllOfficeAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchOffice">
+      <soap12:operation soapAction="http://tempuri.org/FetchOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OfficeManagementService">
+    <wsdl:port name="OfficeManagementServiceSoap" binding="tns:OfficeManagementServiceSoap">
+      <soap:address location="http://localhost:7404/OfficeManagementService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OfficeManagementServiceSoap12" binding="tns:OfficeManagementServiceSoap12">
+      <soap12:address location="http://localhost:7404/OfficeManagementService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

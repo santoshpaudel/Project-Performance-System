@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PopulateAllSubSectors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComSubSector" type="tns:ComSubSector" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ComSubSector">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SubSectorId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubSectorEngName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubSectorNepName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubSectorCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SectorId" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Isenable" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Islocked" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lang" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PopulateAllSubSectorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateAllSubSectorsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="PopulateAllSectors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComSubSector" type="tns:ComSubSector" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllSectorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateAllSectorsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSubSectorById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComSubSector" type="tns:ComSubSector" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSubSectorByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateSubSectorByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubSector">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComSubSector" type="tns:ComSubSector" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubSectorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddSubSectorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSubSectorsBySectorId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComSubSector" type="tns:ComSubSector" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateSubSectorsBySectorIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateSubSectorsBySectorIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PopulateAllSubSectorsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateAllSubSectors" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllSubSectorsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateAllSubSectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllSubSectorsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllSectorsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateAllSectors" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllSectorsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateAllSectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllSectorsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateSubSectorById" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateSubSectorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorByIdAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="AddSubSectorSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSubSector" />
+  </wsdl:message>
+  <wsdl:message name="AddSubSectorSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSubSectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSubSectorAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorsBySectorIdSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateSubSectorsBySectorId" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorsBySectorIdSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateSubSectorsBySectorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateSubSectorsBySectorIdAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:portType name="SectorServiceSoap">
+    <wsdl:operation name="PopulateAllSubSectors">
+      <wsdl:input message="tns:PopulateAllSubSectorsSoapIn" />
+      <wsdl:output message="tns:PopulateAllSubSectorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllSectors">
+      <wsdl:input message="tns:PopulateAllSectorsSoapIn" />
+      <wsdl:output message="tns:PopulateAllSectorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorById">
+      <wsdl:input message="tns:PopulateSubSectorByIdSoapIn" />
+      <wsdl:output message="tns:PopulateSubSectorByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubSector">
+      <wsdl:input message="tns:AddSubSectorSoapIn" />
+      <wsdl:output message="tns:AddSubSectorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorsBySectorId">
+      <wsdl:input message="tns:PopulateSubSectorsBySectorIdSoapIn" />
+      <wsdl:output message="tns:PopulateSubSectorsBySectorIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SectorServiceSoap" type="tns:SectorServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PopulateAllSubSectors">
+      <soap:operation soapAction="http://tempuri.org/PopulateAllSubSectors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateAllSubSectorsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllSectors">
+      <soap:operation soapAction="http://tempuri.org/PopulateAllSectors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateAllSectorsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorById">
+      <soap:operation soapAction="http://tempuri.org/PopulateSubSectorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateSubSectorByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubSector">
+      <soap:operation soapAction="http://tempuri.org/AddSubSector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddSubSectorAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorsBySectorId">
+      <soap:operation soapAction="http://tempuri.org/PopulateSubSectorsBySectorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateSubSectorsBySectorIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SectorServiceSoap12" type="tns:SectorServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PopulateAllSubSectors">
+      <soap12:operation soapAction="http://tempuri.org/PopulateAllSubSectors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateAllSubSectorsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllSectors">
+      <soap12:operation soapAction="http://tempuri.org/PopulateAllSectors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateAllSectorsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorById">
+      <soap12:operation soapAction="http://tempuri.org/PopulateSubSectorById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateSubSectorByIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubSector">
+      <soap12:operation soapAction="http://tempuri.org/AddSubSector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddSubSectorAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateSubSectorsBySectorId">
+      <soap12:operation soapAction="http://tempuri.org/PopulateSubSectorsBySectorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateSubSectorsBySectorIdAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SectorService">
+    <wsdl:port name="SectorServiceSoap" binding="tns:SectorServiceSoap">
+      <soap:address location="http://localhost:7404/SectorService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SectorServiceSoap12" binding="tns:SectorServiceSoap12">
+      <soap12:address location="http://localhost:7404/SectorService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

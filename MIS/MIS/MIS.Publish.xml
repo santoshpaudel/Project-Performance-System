@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\ppis_publish_dec3\mis" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="04/16/2010 14:16:58" />
+    <file relUrl="bin/MISDAL.pdb" publishTime="12/03/2016 16:19:12" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.pdb" publishTime="04/16/2010 14:11:48" />
+    <file relUrl="bin/MISCOMMON.dll" publishTime="12/03/2016 13:17:20" />
+    <file relUrl="BudgetDonarService.asmx" publishTime="07/16/2015 19:54:26" />
+    <file relUrl="OutputTargetService.asmx" publishTime="07/21/2015 17:29:58" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.xml" publishTime="04/16/2010 14:11:48" />
+    <file relUrl="ServiceMenuManagement.asmx" publishTime="07/14/2015 21:13:02" />
+    <file relUrl="VdcMunService.asmx" publishTime="07/16/2015 19:54:26" />
+    <file relUrl="bin/MIS.pdb" publishTime="12/03/2016 16:19:13" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Caching.dll" publishTime="04/16/2010 14:16:58" />
+    <file relUrl="bin/MISCOMMON.pdb" publishTime="12/03/2016 13:17:19" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.xml" publishTime="04/16/2010 14:11:56" />
+    <file relUrl="bin/Microsoft.Practices.ServiceLocation.pdb" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.pdb" publishTime="04/16/2010 14:11:56" />
+    <file relUrl="bin/MISDAL.dll" publishTime="12/03/2016 16:19:12" />
+    <file relUrl="BarsikKaryekramService.asmx" publishTime="10/29/2015 22:11:46" />
+    <file relUrl="bin/Microsoft.Practices.ServiceLocation.dll" publishTime="04/16/2010 14:16:58" />
+    <file relUrl="LoginService.asmx" publishTime="09/01/2015 11:32:38" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="04/16/2010 14:16:58" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Caching.xml" publishTime="04/16/2010 14:11:50" />
+    <file relUrl="RoleManagement.asmx" publishTime="07/18/2015 15:27:26" />
+    <file relUrl="bin/MIS.dll" publishTime="12/03/2016 16:19:13" />
+    <file relUrl="OfficeManagementService.asmx" publishTime="07/14/2015 21:13:02" />
+    <file relUrl="bin/Microsoft.Practices.Unity.dll" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="SectorService.asmx" publishTime="07/19/2015 19:56:32" />
+    <file relUrl="bin/Microsoft.Practices.Unity.Interception.dll" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="BaseService.asmx" publishTime="07/14/2015 21:13:02" />
+    <file relUrl="bin/Microsoft.Practices.Unity.pdb" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="UserManagementService.asmx" publishTime="07/14/2015 21:13:02" />
+    <file relUrl="ActivityManagementService.asmx" publishTime="07/19/2015 15:37:26" />
+    <file relUrl="Service1.asmx" publishTime="07/14/2015 21:13:02" />
+    <file relUrl="Web.config" publishTime="09/28/2016 07:33:16" />
+    <file relUrl="ProjectService.asmx" publishTime="09/02/2015 15:14:38" />
+    <file relUrl="bin/Microsoft.Practices.Unity.Interception.pdb" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="SmsService.asmx" publishTime="07/16/2015 19:54:26" />
+    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="10/11/2006 14:25:20" />
+    <file relUrl="FrameworkManagementService.asmx" publishTime="11/18/2015 07:44:58" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Caching.pdb" publishTime="04/16/2010 14:11:50" />
+  </publishProfile>
+</publishData>

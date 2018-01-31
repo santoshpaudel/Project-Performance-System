@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthSoapHd" type="tns:AuthSoapHd" />
+      <s:complexType name="AuthSoapHd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="PopulateDonarDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="donarId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateDonarDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateDonarDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDonar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objComBudgetDonar" type="tns:ComBudgetDonar" />
+            <s:element minOccurs="1" maxOccurs="1" name="donarId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ComBudgetDonar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DonarEngName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DonarNepName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DonarCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DonarType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEnable" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLocked" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddDonarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDonarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllDonars">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PopulateAllDonarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PopulateAllDonarsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDonar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="donarId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDonarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LockBudgetDonar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="donarId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LockBudgetDonarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LockBudgetDonarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockBudgetDonar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="donarId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockBudgetDonarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UnlockBudgetDonarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateDonarDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateDonarDetails" />
+  </wsdl:message>
+  <wsdl:message name="PopulateDonarDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateDonarDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateDonarDetailsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="AddDonarSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDonar" />
+  </wsdl:message>
+  <wsdl:message name="AddDonarSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDonarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDonarAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllDonarsSoapIn">
+    <wsdl:part name="parameters" element="tns:PopulateAllDonars" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllDonarsSoapOut">
+    <wsdl:part name="parameters" element="tns:PopulateAllDonarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PopulateAllDonarsAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="deleteDonarSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteDonar" />
+  </wsdl:message>
+  <wsdl:message name="deleteDonarSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteDonarResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteDonarAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="LockBudgetDonarSoapIn">
+    <wsdl:part name="parameters" element="tns:LockBudgetDonar" />
+  </wsdl:message>
+  <wsdl:message name="LockBudgetDonarSoapOut">
+    <wsdl:part name="parameters" element="tns:LockBudgetDonarResponse" />
+  </wsdl:message>
+  <wsdl:message name="LockBudgetDonarAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:message name="UnlockBudgetDonarSoapIn">
+    <wsdl:part name="parameters" element="tns:UnlockBudgetDonar" />
+  </wsdl:message>
+  <wsdl:message name="UnlockBudgetDonarSoapOut">
+    <wsdl:part name="parameters" element="tns:UnlockBudgetDonarResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnlockBudgetDonarAuthSoapHd">
+    <wsdl:part name="AuthSoapHd" element="tns:AuthSoapHd" />
+  </wsdl:message>
+  <wsdl:portType name="BudgetDonarServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateDonarDetails">
+      <wsdl:input message="tns:PopulateDonarDetailsSoapIn" />
+      <wsdl:output message="tns:PopulateDonarDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDonar">
+      <wsdl:input message="tns:AddDonarSoapIn" />
+      <wsdl:output message="tns:AddDonarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllDonars">
+      <wsdl:input message="tns:PopulateAllDonarsSoapIn" />
+      <wsdl:output message="tns:PopulateAllDonarsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDonar">
+      <wsdl:input message="tns:deleteDonarSoapIn" />
+      <wsdl:output message="tns:deleteDonarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LockBudgetDonar">
+      <wsdl:input message="tns:LockBudgetDonarSoapIn" />
+      <wsdl:output message="tns:LockBudgetDonarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockBudgetDonar">
+      <wsdl:input message="tns:UnlockBudgetDonarSoapIn" />
+      <wsdl:output message="tns:UnlockBudgetDonarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BudgetDonarServiceSoap" type="tns:BudgetDonarServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:HelloWorldAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateDonarDetails">
+      <soap:operation soapAction="http://tempuri.org/PopulateDonarDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateDonarDetailsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDonar">
+      <soap:operation soapAction="http://tempuri.org/AddDonar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllDonars">
+      <soap:operation soapAction="http://tempuri.org/PopulateAllDonars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PopulateAllDonarsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDonar">
+      <soap:operation soapAction="http://tempuri.org/deleteDonar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockBudgetDonar">
+      <soap:operation soapAction="http://tempuri.org/LockBudgetDonar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:LockBudgetDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockBudgetDonar">
+      <soap:operation soapAction="http://tempuri.org/UnlockBudgetDonar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UnlockBudgetDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BudgetDonarServiceSoap12" type="tns:BudgetDonarServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:HelloWorldAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateDonarDetails">
+      <soap12:operation soapAction="http://tempuri.org/PopulateDonarDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateDonarDetailsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDonar">
+      <soap12:operation soapAction="http://tempuri.org/AddDonar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateAllDonars">
+      <soap12:operation soapAction="http://tempuri.org/PopulateAllDonars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PopulateAllDonarsAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDonar">
+      <soap12:operation soapAction="http://tempuri.org/deleteDonar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockBudgetDonar">
+      <soap12:operation soapAction="http://tempuri.org/LockBudgetDonar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LockBudgetDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockBudgetDonar">
+      <soap12:operation soapAction="http://tempuri.org/UnlockBudgetDonar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UnlockBudgetDonarAuthSoapHd" part="AuthSoapHd" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BudgetDonarService">
+    <wsdl:port name="BudgetDonarServiceSoap" binding="tns:BudgetDonarServiceSoap">
+      <soap:address location="http://localhost:7404/BudgetDonarService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BudgetDonarServiceSoap12" binding="tns:BudgetDonarServiceSoap12">
+      <soap12:address location="http://localhost:7404/BudgetDonarService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
